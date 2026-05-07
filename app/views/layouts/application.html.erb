@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      <%= content_for?(:title) ? yield(:title) : "Syftet Ltd | Software Company in Bangladesh." %>
+    </title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="title" content="<%= content_for?(:meta_title) ? yield(:meta_title) : 'Software Company in Bangladesh | Syftet' %>">
+    <meta name="description" content="<%= content_for?(:meta_description) ? yield(:meta_description) : 'Fast growing software product and services company in Bangladesh. We have a team of talented engineer expertise on Ruby on Rails, .NET, PHP, Java, Android and iOS.' %>">
+
+    <meta property="og:title" content="<%= content_for?(:meta_title) ? yield(:meta_title) : 'Software Company in Bangladesh | Syftet' %>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= request.original_url %>">
+    <meta property="og:description" content="<%= content_for?(:meta_description) ? yield(:meta_description) : '' %>">
+    <meta property="og:site_name" content="Syftet Ltd">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://twitter.com/syftetltd">
+    <meta name="twitter:creator" content="https://twitter.com/syftetltd">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= yield :head %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css", media: "all" %>
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+
+    <style>
+      body { background-color: #090a30; }
+      .mega-menu { display: none; }
+    </style>
+
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js" defer></script>
+
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <%= render "shared/new_header" %>
+    <%= yield %>
+    <%= render "shared/new_footer" %>
+
+    <a id="ui-to-top" class="ui-to-top fa fa-angle-up" href="#" style="display: none;"
+       data-controller="scroll-to-top"
+       data-action="click->scroll-to-top#scroll"></a>
+  </body>
+</html>

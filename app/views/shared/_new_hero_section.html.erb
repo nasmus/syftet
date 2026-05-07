@@ -1,0 +1,43 @@
+<section class="hero-section">
+  <div class="custom-wrapper custom-pl custom-pr">
+    <div class="hero">
+      <div class="hero-content">
+        <div class="hero-content-title">Build smarter, faster, and better with our expert software teams.</div>
+        <p>Whether it's web, mobile, or enterprise solutions—our engineers bring innovation, precision,
+          and passion to every project.<br>
+          🔹 Custom Software | 🔹 Scalable Architecture | 🔹 Proven Results<br>
+        </p>
+        <p>Let's turn your idea into impact.</p>
+        <div class="buttons">
+          <button class="book-consultation-btn"
+                  data-cal-link="asif-imran-4hmcim/30min"
+                  data-cal-namespace="30min"
+                  data-cal-config='{"layout":"month_view"}'>Book a Free Consultation</button>
+          <%= link_to "Contact Us", contact_us_path, class: "contact-btn-2" %>
+        </div>
+      </div>
+      <div class="globe-animation display-hide">
+        <div id="lottie-globe" class="lottie-animation" data-controller="lottie" data-lottie-path-value="<%= asset_path('animation.json') %>"></div>
+      </div>
+    </div>
+    <div class="partners-wrapper">
+      <div class="partners">
+        <a href="https://bit.ly/40Pnf51" target="_blank" rel="noopener" title="Daily Islam">
+          <%= image_tag "daily-islam-whit-logo.png", alt: "daily islam" %>
+        </a>
+        <a href="https://www.islamibankbd.com" target="_blank" rel="noopener" title="Islami Bank">
+          <%= image_tag "ibbplc.webp", alt: "Islami Bank" %>
+        </a>
+        <a href="http://bnveteran.navy.mil.bd/" target="_blank" rel="noopener" title="Bangladesh Navy">
+          <%= image_tag "navy-2.png", alt: "Bangladesh Navy" %>
+        </a>
+        <a href="https://inweapp.com/" target="_blank" rel="noopener" title="inWe">
+          <%= image_tag "inwe-white-logo.png", style: "padding-top: 7px", alt: "inwe-whit-logo" %>
+        </a>
+        <a href="https://www.modhumotibankplc.com/" target="_blank" rel="noopener" title="Mpdhumoti Bank">
+          <%= image_tag "mmb-plc.webp", style: "padding-top: 15px", alt: "Mpdhumoti Bank" %>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

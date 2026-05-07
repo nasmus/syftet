@@ -1,0 +1,47 @@
+<section class="services-section">
+  <div class="custom-wrapper custom-pl custom-pr">
+    <div class="container-service">
+      <div class="section-title-service">
+        <h2>Explore Our Services</h2>
+        <p>SYFTET incorporates the full cycle of offshore software development services. We focus on providing managed dedicated teams and developing sophisticated enterprise applications.</p>
+      </div>
+
+      <div class="services-grid-service">
+        <%
+          services = [
+            { href: web_development_company_path,                 label: "Web Development",
+              icon: "fas fa-laptop-code",   title: "Web Development",
+              copy: "With 10+ years experience and 150+ completed projects, our experts deliver high-quality, SEO-friendly websites tailored to your requirements. We're committed to meeting your criteria within your deadline." },
+            { href: custom_software_development_company_path,     label: "Custom Software Development",
+              icon: "fas fa-shopping-cart", title: "Custom Software",
+              copy: "We develop custom software tailored to your unique needs. Our expert engineers ensure quality solutions, adapting existing products or building from scratch to meet your business goals with precision and reliability." },
+            { href: desktop_application_development_company_path, label: "Desktop Applications",
+              icon: "fas fa-desktop",       title: "Desktop Applications",
+              copy: "Powerful desktop solutions for businesses requiring robust, secure, and offline-capable software. Our applications integrate seamlessly with your existing systems and workflows." },
+            { href: ui_ux_design_path,                            label: "UX/UI Design",
+              icon: "fas fa-paint-brush",   title: "UX/UI Design",
+              copy: "Our design team creates intuitive, user-centered interfaces that enhance user engagement and satisfaction. We combine aesthetics with functionality for exceptional digital experiences." },
+            { href: mobile_app_development_company_path,          label: "Mobile Apps",
+              icon: "fas fa-mobile-alt",    title: "Mobile Apps",
+              copy: "We develop high-performance mobile applications for iOS and Android platforms. Our apps are designed to engage users and solve real business challenges with innovative solutions." },
+            { href: website_maintenance_services_company_path,    label: "Maintenance & Support",
+              icon: "fas fa-tools",         title: "Maintenance & Support",
+              copy: "24/7 technical support and maintenance services to keep your software running smoothly. Our team quickly resolves issues and implements updates to ensure optimal performance." }
+          ]
+        %>
+        <% services.each do |s| %>
+          <div class="service-card-service">
+            <a href="<%= s[:href] %>" class="card-link" aria-label="<%= s[:label] %>"></a>
+            <div class="service-icon-service">
+              <i class="<%= s[:icon] %>"></i>
+            </div>
+            <div class="service-content-service">
+              <h3><%= s[:title] %></h3>
+              <p><%= s[:copy] %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

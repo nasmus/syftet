@@ -1,0 +1,56 @@
+<%= form_with url: start_project_path,
+              id: "contactid",
+              class: "contact-form",
+              local: false,
+              html: { novalidate: true },
+              data: { controller: "contact-form" } do |form| %>
+  <%= hidden_field_tag :current_page, request.original_url %>
+
+  <div class="form-group-inline">
+    <div class="form-group">
+      <%= form.text_field :first_name, name: "contact_list[first_name]", id: "contact_list_first_name", placeholder: "Your name", required: true %>
+      <div class="error-message"></div>
+    </div>
+    <div class="form-group">
+      <%= form.text_field :last_name, name: "contact_list[last_name]", id: "contact_list_last_name", placeholder: "Last name", required: true %>
+      <div class="error-message"></div>
+    </div>
+  </div>
+
+  <div class="form-group-inline">
+    <div class="form-group">
+      <%= form.text_field :company_name, name: "contact_list[company_name]", placeholder: "Company name" %>
+      <div class="error-message"></div>
+    </div>
+    <div class="form-group">
+      <%= form.email_field :email, name: "contact_list[email]", id: "contact_list_email", placeholder: "Your email", required: true %>
+      <div class="error-message"></div>
+    </div>
+  </div>
+
+  <div class="form-group-inline">
+    <div class="form-group">
+      <%= form.select :service,
+                      ["Custom Software", "Desktop Application", "Mobile App", "Gen AI", "Web Development", "Designing", "Business Automation"],
+                      { prompt: "Service" },
+                      name: "contact_list[service]" %>
+      <div class="error-message"></div>
+    </div>
+    <div class="form-group">
+      <%= form.select :budget,
+                      ["Consultation Free", "$1K-$5K", "$5K-$10K", "$10K+"],
+                      { prompt: "Budget" },
+                      name: "contact_list[budget]" %>
+      <div class="error-message"></div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= form.text_area :message, name: "contact_list[message]", placeholder: "Tell us more about idea!" %>
+    <div class="error-message"></div>
+  </div>
+
+  <div class="submit-wrapper">
+    <span class="submit-btn" data-action="click->contact-form#validateAndSubmit">Submit</span>
+  </div>
+<% end %>

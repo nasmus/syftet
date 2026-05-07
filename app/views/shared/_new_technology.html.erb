@@ -1,0 +1,21 @@
+<section class="technologies-section">
+  <div class="custom-wrapper custom-pl custom-pr">
+    <div class="section-title-tech">
+      <h2>Our Core Technologies</h2>
+      <p>SYFTET provides world-class development services applying the latest web, mobile, desktop, and enterprise technologies.</p>
+    </div>
+
+    <div class="tech-grid">
+      <% @technologies.each do |technology| %>
+        <div class="tech-card">
+          <a href="<%= technology.page_url %>">
+            <div class="tech-icon">
+              <%= image_tag technology.logo_url, alt: technology.name %>
+            </div>
+            <div class="tech-name"><%= technology.name %></div>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

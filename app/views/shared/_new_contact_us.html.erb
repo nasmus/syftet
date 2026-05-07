@@ -1,0 +1,34 @@
+<div class="form-container">
+  <div class="custom-wrapper custom-pl custom-pr">
+
+    <div class="form-heading">
+      <h2>
+        <span>Hey Wanna Start Something Great?</span>
+      </h2>
+    </div>
+
+    <div class="form-grid">
+      <div class="profile-card">
+        <%= image_tag "imran.png", alt: "Imran" %>
+        <h3>Hi, I'm Imran.</h3>
+        <p>Got an idea? Let's chat on WhatsApp or jump on a quick call.</p>
+
+        <div class="contact_buttons">
+          <a href="https://wa.me/8801908057617" target="_blank" rel="noopener" class="ask-btn" style="text-decoration: none;">
+            <span>Ask Questions</span>
+          </a>
+          <button class="book-btn"
+                  data-cal-link="asif-imran-4hmcim/30min"
+                  data-cal-namespace="30min"
+                  data-cal-config='{"layout":"month_view"}'>
+            Book a Call
+          </button>
+        </div>
+      </div>
+
+      <%= render "shared/new_contact_form" %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/cal_com" %>
