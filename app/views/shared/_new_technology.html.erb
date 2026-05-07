@@ -8,12 +8,12 @@
     <div class="tech-grid">
       <% @technologies.each do |technology| %>
         <div class="tech-card">
-          <a href="<%= technology.page_url %>">
+<!--          <a href="<%#= technology.page_url %>">-->
             <div class="tech-icon">
               <%= image_tag technology.logo_url, alt: technology.name %>
             </div>
             <div class="tech-name"><%= technology.name %></div>
-          </a>
+<!--          </a>-->
         </div>
       <% end %>
     </div>
