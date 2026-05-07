@@ -1,0 +1,206 @@
+<% content_for :title       do %>Careers | ANZARA GLOBAL<% end %>
+<% content_for :meta_title  do %>Careers | ANZARA GLOBAL<% end %>
+<% content_for :meta_description do %>Join ANZARA GLOBAL — a workplace built for tech-passionate professionals who care about innovation, collaboration and continuous learning.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Careers",
+           title: "Build the future with us",
+           copy: "We're a workplace for tech-passionate professionals — engineers, designers and operators who care about innovation, continuous learning and shipping work they're proud of." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+      <div>
+        <h2 class="relative mb-6 inline-block text-3xl font-bold text-primary md:text-4xl">
+          Let's Grow Together
+          <span class="absolute -bottom-3 left-0 h-[5px] w-[100px] rounded bg-accent"></span>
+        </h2>
+        <p class="mt-8 text-base leading-relaxed text-soft-text md:text-lg">
+          We invest in talent. Our team works in a collaborative environment where ideas are taken seriously, mentorship is part of the day, and growth is something we plan for — not something you have to fight for.
+        </p>
+        <p class="mt-4 text-base leading-relaxed text-soft-text md:text-lg">
+          If you like to think outside the box, ship work end-to-end, and learn alongside people who are very good at what they do — you'll feel at home here.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-2xl bg-gradient-to-br from-primary to-secondary p-6 text-white">
+          <div class="text-3xl font-extrabold text-accent">10+</div>
+          <p class="mt-2 text-sm opacity-80">Years building products</p>
+        </div>
+        <div class="rounded-2xl bg-light-gray p-6">
+          <div class="text-3xl font-extrabold text-primary">3</div>
+          <p class="mt-2 text-sm text-soft-text">Global offices</p>
+        </div>
+        <div class="rounded-2xl bg-light-gray p-6">
+          <div class="text-3xl font-extrabold text-btn-green">150+</div>
+          <p class="mt-2 text-sm text-soft-text">Projects delivered</p>
+        </div>
+        <div class="rounded-2xl bg-gradient-to-br from-accent to-primary p-6 text-white">
+          <div class="text-3xl font-extrabold">∞</div>
+          <p class="mt-2 text-sm opacity-80">Learning days</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Why Work Here
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        A few things we work hard to keep true about life on the team.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
+      <% [
+        ["fas fa-lightbulb", "Innovation-Focused", "We back the unusual idea when it earns its keep."],
+        ["fas fa-people-group", "Collaborative", "Pairing, reviews and hand-offs are how we work, not exceptions."],
+        ["fas fa-graduation-cap", "Continuous Learning", "Time and budget set aside for skill growth, every quarter."],
+        ["fas fa-seedling", "Growth-Oriented", "Career paths planned with you, not for you."],
+        ["fas fa-wand-magic-sparkles", "Think Outside the Box", "If the standard answer is wrong, propose a better one."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl bg-white p-6 text-center shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-light text-2xl text-primary">
+            <i class="<%= icon %>"></i>
+          </div>
+          <h3 class="mb-2 text-base font-bold text-primary"><%= title %></h3>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-12 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Current Openings
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        Browse open roles. Don't see your fit? Send your CV and we'll keep you in mind for future matches.
+      </p>
+    </div>
+
+    <div class="mb-10 flex flex-wrap items-center justify-center gap-3">
+      <%
+        filters = [
+          ["All Departments", true],
+          ["Technology", false],
+          ["Business Development", false],
+          ["Design", false]
+        ]
+      %>
+      <% filters.each do |label, active| %>
+        <button type="button"
+                class="<%= active ? 'bg-primary text-white' : 'bg-light-gray text-primary hover:bg-gray-200' %> rounded-full px-5 py-2 text-sm font-semibold transition">
+          <%= label %>
+        </button>
+      <% end %>
+      <span class="mx-2 hidden h-6 w-px bg-gray-300 md:inline-block"></span>
+      <% [["All Locations", false], ["Bangladesh", true], ["Australia", false], ["UK", false]].each do |label, active| %>
+        <button type="button"
+                class="<%= active ? 'bg-primary text-white' : 'bg-light-gray text-primary hover:bg-gray-200' %> rounded-full px-5 py-2 text-sm font-semibold transition">
+          <%= label %>
+        </button>
+      <% end %>
+    </div>
+
+    <div class="space-y-5">
+      <%
+        openings = [
+          { title: "Project Manager & SQA Specialist",
+            department: "Technology", location: "Bangladesh", model: "Full-time",
+            blurb: "Lead delivery across cross-functional teams, own quality outcomes and partner with engineering and clients on roadmap and risk." },
+          { title: "Client Relationship Executive Intern",
+            department: "Business Development", location: "Bangladesh", model: "Full-time",
+            blurb: "Support our client-success team with research, outreach and account follow-up. A great first step into a tech business career." }
+        ]
+      %>
+      <% openings.each do |job| %>
+        <div class="group flex flex-col gap-4 rounded-2xl border border-gray-100 bg-light-gray p-6 transition hover:-translate-y-1 hover:shadow-hover md:flex-row md:items-center md:justify-between">
+          <div class="flex-1">
+            <h3 class="mb-2 text-xl font-bold text-primary"><%= job[:title] %></h3>
+            <p class="mb-3 text-sm leading-relaxed text-soft-text"><%= job[:blurb] %></p>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1 text-xs font-semibold text-primary shadow-soft">
+                <i class="fas fa-building text-accent"></i><%= job[:department] %>
+              </span>
+              <span class="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1 text-xs font-semibold text-primary shadow-soft">
+                <i class="fas fa-location-dot text-accent"></i><%= job[:location] %>
+              </span>
+              <span class="inline-flex items-center gap-1 rounded-full bg-white px-3 py-1 text-xs font-semibold text-primary shadow-soft">
+                <i class="fas fa-clock text-accent"></i><%= job[:model] %>
+              </span>
+            </div>
+          </div>
+          <div class="md:text-right">
+            <%= button_to "Apply", apply_online_path,
+                          method: :post,
+                          params: { position: job[:title] },
+                          class: "inline-block cursor-pointer rounded-md bg-btn-green px-8 py-3 text-sm font-bold text-white no-underline transition hover:scale-105",
+                          form: { class: "inline-block" } %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="mt-12 rounded-2xl border-l-4 border-accent bg-light-gray p-8 text-center md:text-left">
+      <div class="flex flex-col items-center gap-6 md:flex-row md:justify-between">
+        <div>
+          <h3 class="mb-2 text-xl font-bold text-primary">Don't see a role that fits?</h3>
+          <p class="text-sm leading-relaxed text-soft-text">
+            We're always interested in great people. Send your CV and we'll keep it on file for future matches.
+          </p>
+        </div>
+        <%= link_to "Send Your CV", contact_us_path,
+                    class: "inline-block whitespace-nowrap rounded-md bg-primary px-6 py-3 text-sm font-bold text-white no-underline transition hover:bg-secondary" %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Where You'll Work
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        Three offices, one team. Choose the one closest to home — or join the one that fits the role.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <%
+        offices = [
+          { country: "Bangladesh", flag: "🇧🇩",
+            address_html: "4th Floor, House: 512, Road: 07,<br>Avenue: 03, Mirpur DOHS,<br>Pallabi, Dhaka 1216" },
+          { country: "Australia", flag: "🇦🇺",
+            address_html: "Suite 523,<br>368 Sussex Street Sydney,<br>New South Wales 2000" },
+          { country: "United Kingdom", flag: "🇬🇧",
+            address_html: "Level 39, One Canada Square,<br>Canary Wharf London E14 5AB,<br>United Kingdom" }
+        ]
+      %>
+      <% offices.each do |o| %>
+        <div class="rounded-2xl border-t-4 border-accent bg-white p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 flex items-center gap-3">
+            <span class="text-3xl"><%= o[:flag] %></span>
+            <h3 class="text-xl font-bold text-primary"><%= o[:country] %></h3>
+          </div>
+          <p class="text-base leading-relaxed text-soft-text"><%= o[:address_html].html_safe %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

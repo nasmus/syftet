@@ -113,43 +113,10 @@
             <%= link_to "Careers", career_path, class: "text-inherit no-underline transition-colors duration-300 hover:text-hover-text" %>
           </li>
 
-          <li class="mega-dropdown relative max-[1104px]:w-full" data-controller="dropdown">
-            <button type="button"
-                    class="dropdown-toggle cursor-pointer border-none bg-none text-sm font-bold text-white hover:text-hover-text max-[1104px]:w-full max-[1104px]:text-left"
-                    data-action="click->dropdown#toggle">About Us</button>
-            <div class="mega-menu fixed top-[70px] left-0 right-0 z-[1000] mx-auto max-h-[80vh] w-[calc(100%-10rem)] max-w-[calc(1300px-10rem)] cursor-default justify-between gap-8 overflow-y-auto bg-white p-8 text-black shadow-[0_4px_20px_rgba(0,0,0,0.1)]
-                        max-[1104px]:static max-[1104px]:m-0 max-[1104px]:w-full max-[1104px]:p-4 max-[1104px]:shadow-none
-                        max-[768px]:flex-col">
-              <div class="menu-columns grid w-full grid-cols-3 gap-x-8 gap-y-4 max-[1104px]:grid-cols-1">
-                <div class="column !w-max">
-                  <h4 class="mb-2 pb-[5px] text-base text-black">🏦 About Us →</h4>
-                  <%= link_to "Blogs", blogs_path, class: "mega-menu-link" %>
-                  <%= link_to "Gallery", photo_gallery_path, class: "mega-menu-link" %>
-                  <%= link_to "Company Profile", company_profile_path, class: "mega-menu-link" %>
-                  <%= link_to "Development Team", best_teams_path, class: "mega-menu-link" %>
-                </div>
-                <div class="column !w-max">
-                  <h4 class="mb-2 pb-[5px] text-base text-black">🏦 Our Process →</h4>
-                  <span class="non-link mb-2 block cursor-default pl-6 text-[15px] text-[#1c3d5b]">Agile methodology</span>
-                  <span class="non-link mb-2 block cursor-default pl-6 text-[15px] text-[#1c3d5b]">Waterfall approach</span>
-                  <span class="non-link mb-2 block cursor-default pl-6 text-[15px] text-[#1c3d5b]">DevOps Practices</span>
-                  <span class="non-link mb-2 block cursor-default pl-6 text-[15px] text-[#1c3d5b]">Quality Assurance</span>
-                  <span class="non-link mb-2 block cursor-default pl-6 text-[15px] text-[#1c3d5b]">Client Collaboration</span>
-                  <%= link_to "More Details →", how_we_work_path, class: "mega-menu-link", style: "color: #4C8027" %>
-                </div>
-                <div class="column !w-max">
-                  <h4 class="mb-2 pb-[5px] text-base text-black">🎮 Our Software Products →</h4>
-                  <%= link_to "Bequent", "/portfolios/bequent", class: "mega-menu-link" %>
-                  <%= link_to "Lienex POS", "/portfolios/lienex-pos", class: "mega-menu-link" %>
-                  <%= link_to "E-commerce Solution", root_path, class: "mega-menu-link" %>
-                  <%= link_to "Inventory Management System", root_path, class: "mega-menu-link" %>
-                  <%= link_to "Hospital Management System", root_path, class: "mega-menu-link" %>
-                  <%= link_to "Restaurant Management System", root_path, class: "mega-menu-link" %>
-                </div>
-              </div>
-              <%= render "shared/promo_banner" %>
-            </div>
+          <li class="text-sm font-bold text-white max-[1104px]:w-full">
+            <%= link_to "About Us", about_us_path, class: "text-inherit no-underline transition-colors duration-300 hover:text-hover-text" %>
           </li>
+
         </ul>
 
         <%= link_to "Contact Us", contact_us_path,

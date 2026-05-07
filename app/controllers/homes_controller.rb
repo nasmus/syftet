@@ -20,9 +20,11 @@ class HomesController < ApplicationController
 
   def contact_us; end
   def how_we_work; end
+  def career; end
+  def about_us; end
 
   STUB_ACTIONS = %i[
-    sitemap review clients events career about_us technologies
+    sitemap review clients events technologies
     life_at_syftet
     ror_development java_application_development dot_net_development
     company_profile photo_gallery web_design_company
