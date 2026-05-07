@@ -1,0 +1,210 @@
+<% content_for :title       do %>How We Work | ANZARA GLOBAL<% end %>
+<% content_for :meta_title  do %>How We Work | ANZARA GLOBAL<% end %>
+<% content_for :meta_description do %>From discovery to deployment — see how ANZARA GLOBAL guides every project from concept to a market-ready product through a proven, transparent process.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Our Approach",
+           title: "How We Work",
+           copy: "A reliable partner for software outsourcing — we guide you from the first idea to a market-ready product, with a process designed for clarity, control and confidence at every step." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Our Process
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        A clear six-step workflow that takes a project from initial conversation to long-term support — with checkpoints you can review at every stage.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <%
+        steps = [
+          { num: "01", icon: "fas fa-comments", title: "Contact Us",
+            copy: "We start by exploring your needs together — understanding the problem, your constraints and the outcome you want — and recommend a path that fits." },
+          { num: "02", icon: "fas fa-lightbulb", title: "Visualization",
+            copy: "Our team interprets your idea and shapes it into a coherent vision, so what you imagine and what we build line up from day one." },
+          { num: "03", icon: "fas fa-clipboard-list", title: "Requirement Analysis",
+            copy: "We collect detailed requirements, run a thorough business analysis and produce mock-ups so you can see the product before a line of code is written." },
+          { num: "04", icon: "fas fa-file-signature", title: "Legal Execution",
+            copy: "We negotiate and sign a contract that covers scope, budget and timelines — clarity up front means no surprises later." },
+          { num: "05", icon: "fas fa-diagram-project", title: "Project Mapping & Management",
+            copy: "A development roadmap is created with milestones and tracked progress, giving you visibility into delivery from start to finish." },
+          { num: "06", icon: "fas fa-rocket", title: "Launch, Support & Update",
+            copy: "After deployment we stay with you — handling maintenance, monitoring and new feature additions as your product grows." }
+        ]
+      %>
+      <% steps.each do |s| %>
+        <div class="relative rounded-2xl border border-gray-100 bg-light-gray p-8 transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="absolute -top-4 -right-4 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-lg font-extrabold text-white shadow-soft">
+            <%= s[:num] %>
+          </div>
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-2xl text-white">
+            <i class="<%= s[:icon] %>"></i>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-primary"><%= s[:title] %></h3>
+          <p class="text-base leading-relaxed text-soft-text"><%= s[:copy] %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Agile Methodologies
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        A framework for managing complex, evolving projects. We pick the approach that fits the work — not the other way around.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <div class="rounded-2xl bg-gradient-to-br from-primary to-secondary p-10 text-white">
+        <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-white/10 text-3xl text-accent">
+          <i class="fas fa-people-arrows"></i>
+        </div>
+        <h3 class="mb-3 text-2xl font-bold">Scrum</h3>
+        <p class="mb-6 text-sm leading-relaxed text-white/80">
+          Best for large, complex projects where requirements are unclear or expected to change. Scrum keeps a tight feedback loop between you and the team — so the product evolves alongside the conversation.
+        </p>
+        <ul class="space-y-3 text-sm">
+          <% [
+            "Short, time-boxed sprints with clear deliverables",
+            "Daily stand-ups and sprint reviews you can join",
+            "Backlog refined collaboratively with the client",
+            "Direction can shift between sprints without disruption"
+          ].each do |line| %>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-circle-check mt-1 text-accent"></i>
+              <span class="text-white/85"><%= line %></span>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="rounded-2xl border-2 border-primary bg-white p-10">
+        <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-light text-3xl text-primary">
+          <i class="fas fa-list-check"></i>
+        </div>
+        <h3 class="mb-3 text-2xl font-bold text-primary">Kanban</h3>
+        <p class="mb-6 text-sm leading-relaxed text-soft-text">
+          Suited to large enterprise systems with legacy code and teams that exceed typical Scrum size limits. Kanban reduces planning overhead and keeps work flowing continuously.
+        </p>
+        <ul class="space-y-3 text-sm">
+          <% [
+            "Continuous flow instead of fixed sprints",
+            "Work-in-progress limits to prevent bottlenecks",
+            "Lower planning overhead, faster cycle times",
+            "Excellent for support, maintenance and operations work"
+          ].each do |line| %>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-circle-check mt-1 text-btn-green"></i>
+              <span class="text-soft-text"><%= line %></span>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+      <div>
+        <h2 class="relative mb-6 inline-block text-3xl font-bold text-primary md:text-4xl">
+          Waterfall Methodology
+          <span class="absolute -bottom-3 left-0 h-[5px] w-[100px] rounded bg-accent"></span>
+        </h2>
+        <p class="mt-8 text-base leading-relaxed text-soft-text md:text-lg">
+          A linear approach ideal for projects with well-defined requirements, fixed budgets, short timelines and direct oversight. Each phase produces clear deliverables before the next begins — perfect when scope is locked and predictability matters most.
+        </p>
+
+        <div class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <% [
+            ["fas fa-bullseye", "Well-defined requirements"],
+            ["fas fa-coins", "Fixed budgets"],
+            ["fas fa-stopwatch", "Short timelines"],
+            ["fas fa-eye", "Direct oversight"]
+          ].each do |icon, label| %>
+            <div class="flex items-center gap-3 rounded-lg bg-light-gray p-3">
+              <i class="<%= icon %> text-lg text-btn-green"></i>
+              <span class="text-sm font-semibold text-primary"><%= label %></span>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div>
+        <ol class="relative space-y-6 border-l-2 border-accent/30 pl-8">
+          <% [
+            ["Requirements", "Capture every requirement up front, in detail."],
+            ["Design", "Architect and design before any code is written."],
+            ["Implementation", "Build to spec with phase-gated checkpoints."],
+            ["Verification", "Test against the agreed acceptance criteria."],
+            ["Maintenance", "Operate, monitor and patch after launch."]
+          ].each_with_index do |(title, copy), i| %>
+            <li class="relative">
+              <span class="absolute -left-[42px] flex h-8 w-8 items-center justify-center rounded-full bg-accent text-xs font-bold text-white"><%= i + 1 %></span>
+              <h4 class="text-base font-bold text-primary"><%= title %></h4>
+              <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+            </li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Our Development Tools
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        The platforms we use every day to keep work moving, conversations open and code shipping cleanly.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <%
+        tool_groups = [
+          { icon: "fas fa-tasks", title: "Project Management",
+            tools: ["JIRA", "Trello", "Asana", "ClickUp"] },
+          { icon: "fas fa-comments", title: "Collaboration",
+            tools: ["Slack", "Microsoft Teams", "Zoom", "Google Meet"] },
+          { icon: "fab fa-git-alt", title: "Version Control",
+            tools: ["Git", "GitHub", "GitLab", "Bitbucket"] },
+          { icon: "fas fa-infinity", title: "Continuous Integration",
+            tools: ["Jenkins", "GitHub Actions", "CircleCI", "GitLab CI"] }
+        ]
+      %>
+      <% tool_groups.each do |group| %>
+        <div class="rounded-2xl border-t-4 border-accent bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-xl text-white">
+            <i class="<%= group[:icon] %>"></i>
+          </div>
+          <h3 class="mb-4 text-base font-bold text-primary"><%= group[:title] %></h3>
+          <ul class="space-y-2">
+            <% group[:tools].each do |tool| %>
+              <li class="flex items-center gap-2 text-sm text-soft-text">
+                <i class="fas fa-circle text-[6px] text-accent"></i>
+                <span><%= tool %></span>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>
