@@ -1,35 +1,32 @@
 <% content_for :title       do %>Custom Software Development Company | ANZARA GLOBAL<% end %>
 <% content_for :meta_title  do %>Custom Software Development Company | ANZARA GLOBAL<% end %>
-<% content_for :meta_description do %>ANZARA GLOBAL builds bespoke software tailored to your business needs — custom apps, product development, enterprise integration and legacy modernization.<% end %>
+<% content_for :meta_description do %>Custom software development services — bespoke applications, product development, enterprise integration and legacy modernization.<% end %>
 
 <%= render "shared/service_hero",
            eyebrow: "Core Development",
            title: "Custom Software Development Company",
-           copy: "Our team of experts can start with a coffee-stained napkin and develop it into the most complex enterprise solution. We build software the way it should be built — tailored, scalable and dependable." %>
+           copy: "Bespoke software, end-to-end. From the first conversation to launch and beyond, our team builds custom applications, modernises legacy systems and integrates enterprise workflows around your business." %>
 
 <section class="flex justify-center bg-white py-20">
   <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
     <div class="mb-14 text-center">
       <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
-        What We Do
+        OUR CUSTOM SOFTWARE DEVELOPMENT SERVICES
         <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
       </h2>
-      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
-        ANZARA GLOBAL is a Bangladesh-based custom software firm with offices in Australia and the UK. We specialise in bespoke solutions for businesses that need software built around them — not the other way around.
-      </p>
     </div>
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
       <%
         offerings = [
           { icon: "fas fa-cubes", title: "Custom Applications Development",
-            copy: "Tailored solutions that automate workflows, unify teams and bring order to fragmented processes — built to your specification." },
+            copy: "We customise and design applications based on your demand for automation, collaboration, and unification. A highly motivated and talented team is always committed to build powerful software tools with a view to growing your business up. We are eagerly waiting to receive all your demands and requirements and render them in a powerful tool." },
           { icon: "fas fa-rocket", title: "Product Development",
-            copy: "From inception to launch, we build cost-efficient products with full lifecycle ownership: discovery, design, development and support." },
+            copy: "Our team of experts in software development are greatly innovative and know how to build a product from scratch. We focus on building up high quality tools with minimum charge, thus greatly reducing your cost. We highly encourage you to get in touch with us if you have any inquiry about your product. Please be noted that our product is highly cost-effective and efficient to deal with clients." },
           { icon: "fas fa-network-wired", title: "Enterprise Application Integration",
-            copy: "Unify databases, legacy systems and modern services so your operations run as one — without manual hand-offs or duplicated data." },
+            copy: "Our EAI process unites all the databases and workflows related to business applications in order to use information consistently. Our team of experts overcome all kinds of integration challenges associated with microservices, APIs, data processing, workspaces, and portals. Enterprise Application integration will make your communication with clients smoother." },
           { icon: "fas fa-arrows-rotate", title: "Legacy Application Modernization",
-            copy: "Update outdated systems to modern stacks, address security vulnerabilities and unlock new capabilities without disrupting your business." }
+            copy: "We understand that an application being outdated can cause many difficulties for your business including being more vulnerable to ransomware attacks, malware and data breaches. Therefore, our team of experts can’t wait to have a deep analysis and run a number of examinations to find out the best possible solution, thus boosting overall productivity." }
         ]
       %>
       <% offerings.each do |o| %>
@@ -49,27 +46,124 @@
   <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
     <div class="mb-14 text-center">
       <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
-        Our Development Approach
+        OUR WORKS
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <%
+        works = [
+          { title: "Welcome to Australia",
+            blurb: "Welcome to Australia is basically a Visa Management Apps where all the international students can avail the facility of going abroad for study. All they have to do is prepare their papers and documents for the corresponding application purpose. In this application a student can find all essential...",
+            team: "2 Developers", tech: "Ruby, RoR", duration: "1 Year and 3 Months" },
+          { title: "Lobster Tail Seafood",
+            blurb: "Lobstartail Seafood is an E-commerce site. On this site anyone can buy or order any seafood item. Lobstartail Seafood focused on providing an excellent customers’ satisfaction & complete automobile solution & providing genuine branded products. We have kept all the arrangement of all modern equip...",
+            team: "2 Developers", tech: "Ruby, RoR", duration: "1 Year and 3 Months" }
+        ]
+      %>
+      <% works.each do |w| %>
+        <div class="flex flex-col rounded-2xl bg-white p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <h3 class="mb-3 text-2xl font-bold text-primary"><%= w[:title] %></h3>
+          <p class="mb-6 text-base leading-relaxed text-soft-text"><%= w[:blurb] %></p>
+          <dl class="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <div class="rounded-lg bg-light-gray p-4">
+              <dt class="text-xs font-semibold uppercase text-gray-500">Team Size</dt>
+              <dd class="mt-1 text-base font-bold text-primary"><%= w[:team] %></dd>
+            </div>
+            <div class="rounded-lg bg-light-gray p-4">
+              <dt class="text-xs font-semibold uppercase text-gray-500">Technologies</dt>
+              <dd class="mt-1 text-base font-bold text-primary"><%= w[:tech] %></dd>
+            </div>
+            <div class="rounded-lg bg-light-gray p-4">
+              <dt class="text-xs font-semibold uppercase text-gray-500">Project Duration</dt>
+              <dd class="mt-1 text-base font-bold text-primary"><%= w[:duration] %></dd>
+            </div>
+          </dl>
+
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<!--<section class="flex justify-center bg-white py-20">-->
+<!--  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">-->
+<!--    <div class="mb-14 text-center">-->
+<!--      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">-->
+<!--        OUR PROCESS-->
+<!--        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>-->
+<!--      </h2>-->
+<!--      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">-->
+<!--        Having the best team in the IT department in Bangladesh has always given us the edge to start off a project brilliantly. Our team of experts can start with a coffee-stained napkin and develop it to the most complex custom enterprise solution. We are proud to announce that our team has innate characteristics to recognise a potential of a tool and then make it into reality. Our team will always support you with the latest updates and tools.-->
+<!--      </p>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">-->
+      <%#
+<!--        steps = [-->
+<!--          { num: "01", icon: "fas fa-comments", title: "Contact Us",-->
+<!--            copy: "We are just a click away from you. Send us a message with your inquiry and our team will reach out to you in 24 hours." },-->
+<!--          { num: "02", icon: "fas fa-lightbulb", title: "We Shape Your Idea",-->
+<!--            copy: "Our team just needs a little bit of hints. Share your ideas with us and let us give them a life. With your collaboration, Our team of Business analysis conducts research and envision your project." },-->
+<!--          { num: "03", icon: "fas fa-file-signature", title: "Executing Legal Part",-->
+<!--            copy: "We sit together with our clients and present possible products and all its terms, and expected delivery time. We make a contractual agreement before signing the document by both parties." },-->
+<!--          { num: "04", icon: "fas fa-diagram-project", title: "Project Mapping And Management",-->
+<!--            copy: "In this part, we design the project with its specifications and features and plan the possible deadline for the project. Our team of experts organises all the necessary project development processes." },-->
+<!--          { num: "05", icon: "fas fa-rocket", title: "Launch, Support And Update",-->
+<!--            copy: "After the consensual agreements, our team of experts commence working on the project development and keep you updated with information, demos and features of the software solution. Once the project is done, we help our client set up the project and run a number of tests. If there is any further support needed, our customer care service is always available." }-->
+<!--        ]-->
+      %>
+      <%# steps.each do |s| %>
+<!--        <div class="relative rounded-2xl border border-gray-100 bg-light-gray p-6 transition hover:-translate-y-1 hover:shadow-hover">-->
+<!--          <div class="absolute -top-3 -right-3 flex h-12 w-12 items-center justify-center rounded-full bg-accent text-sm font-extrabold text-white shadow-soft">-->
+            <%#= s[:num] %>
+<!--          </div>-->
+<!--          <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-xl text-white">-->
+<!--            <i class="<%#= s[:icon] %>"></i>-->
+<!--          </div>-->
+<!--          <h3 class="mb-2 text-base font-bold text-primary"><%#= s[:title] %></h3>-->
+<!--          <p class="text-sm leading-relaxed text-soft-text"><%#= s[:copy] %></p>-->
+<!--        </div>-->
+      <%# end %>
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        OUR APPROACH
         <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
       </h2>
       <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
-        Our methodology blends quality assurance, low-risk agile delivery, deep business analysis and intellectual property protection — so the result is software you actually want to keep.
+        We are fully committed to bring out the best possible design with regular communication with our clients. We welcome the collaboration from our client. We prioritise in regular communication, instructions given by the client and rendering the best output. We always remain transparent to our clients and value their projects.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-      <% [
-        ["fas fa-shield-halved", "Quality Assurance", "Multi-layer testing baked into every sprint."],
-        ["fas fa-route", "Low-Risk Agile", "Iterative delivery with milestone checkpoints."],
-        ["fas fa-magnifying-glass-chart", "Business Analysis", "We understand the problem before writing code."],
-        ["fas fa-lock", "IP Protection", "Your ideas, code and assets remain yours."]
-      ].each do |icon, title, copy| %>
-        <div class="rounded-2xl bg-white p-6 text-center shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
-          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-light text-2xl text-primary">
-            <i class="<%= icon %>"></i>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <%
+        approach = [
+          { icon: "fas fa-shield-halved", title: "Quality",
+            copy: "We believe in quality. Our team of experts employs manual QA and QA applications in order to develop top quality custom software solutions for our clients." },
+          { icon: "fas fa-route", title: "Low-Risk Agile Methodology",
+            copy: "Our experience with latest technology enables us to develop risk-free enterprise solutions for our clients. The strategy and Methodology we follow are quite unique and based on success. We are open to adapt to any changes and requirements demanded by clients to avert any complexity." },
+          { icon: "fas fa-magnifying-glass-chart", title: "Deep Analysis",
+            copy: "Our team of business Analysts inspects your business and requirements to a great extent before deciding and mapping the final project. We focus on building your entire ecosystem with zero flaws." },
+          { icon: "fas fa-lock", title: "Intellectual Property Security",
+            copy: "We acknowledge that your idea is the core part of your project and it is unique, therefore should be safeguarded from all malware and fake claims. Our process and legal documentations are created to ensure the complete ownership and rights of all the codebase and development assets." }
+        ]
+      %>
+      <% approach.each do |a| %>
+        <div class="flex gap-5 rounded-2xl bg-white p-6 shadow-soft">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-btn-green text-2xl text-white">
+            <i class="<%= a[:icon] %>"></i>
           </div>
-          <h4 class="mb-2 text-lg font-bold text-primary"><%= title %></h4>
-          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+          <div>
+            <h3 class="mb-2 text-lg font-bold text-primary"><%= a[:title] %></h3>
+            <p class="text-sm leading-relaxed text-soft-text"><%= a[:copy] %></p>
+          </div>
         </div>
       <% end %>
     </div>
@@ -80,21 +174,34 @@
   <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
     <div class="mb-14 text-center">
       <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
-        Why Choose ANZARA GLOBAL
+        WHAT WE OFFER
         <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
       </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        We understand that existing off-the-shelf products may not address the full needs of your company and smooth workflow is vital for your business success. An upgraded version of your current software can deal with such problems. Considering this fact, we offer customized software solutions, which are also cost-effective,for our clients.
+      </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-      <% [
-        ["Affordable Pricing", "Transparent rates with no hidden fees."],
-        ["Responsive Support", "A quick, responsive team that actually picks up the phone."],
-        ["Customisable Features", "Every feature shaped around your real-world needs."],
-        ["Competitive Costs", "Best-in-class engineering at competitive global rates."]
-      ].each do |title, copy| %>
-        <div class="rounded-2xl border-l-4 border-btn-green bg-light-gray p-6">
-          <h4 class="mb-2 text-lg font-bold text-primary"><%= title %></h4>
-          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <%
+        offers = [
+          { icon: "fas fa-coins", title: "Cost Effectiveness",
+            copy: "You pay us only once and there is no hidden charge for our support. As soon as you become our clients, you never need to worry about license fees or sharing revenue with anyone. We cover everything for you." },
+          { icon: "fas fa-headset", title: "Quick and Responsive Support",
+            copy: "Our team of experts are very quick to respond to your query and deal with any problems you face with your enterprise solution. We value your time and business and so our team fixes any issues as soon as possible" },
+          { icon: "fas fa-wand-magic-sparkles", title: "New Features and Functionality",
+            copy: "We understand that you have some ideas and want some features to be included in your solutions and so we customize your tool according to your demand and requirement. You get exactly what you need in order to boost the functionality of your business process." },
+          { icon: "fas fa-tags", title: "Reasonable Development Cost",
+            copy: "Ultimately most clients look for opportunities to build their enterprise solution with an affordable fee and we understand this. Our product development cost is much lower than what is available on the market. We implement, integrate and develop a new product with an absolutely reasonable fee that you can, ofcourse, compare with other software development companies in Bangladesh." }
+        ]
+      %>
+      <% offers.each do |o| %>
+        <div class="rounded-2xl border-t-4 border-accent bg-light-gray p-6 transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-2xl text-white">
+            <i class="<%= o[:icon] %>"></i>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary"><%= o[:title] %></h3>
+          <p class="text-sm leading-relaxed text-soft-text"><%= o[:copy] %></p>
         </div>
       <% end %>
     </div>
