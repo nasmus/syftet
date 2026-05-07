@@ -1,0 +1,38 @@
+<% content_for :title do %><%= @portfolio.name %> | Portfolio | ANZARA GLOBAL<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Portfolio",
+           title: @portfolio.name,
+           copy: "A closer look at #{@portfolio.name} — one of the products built by the ANZARA GLOBAL team." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="overflow-hidden rounded-2xl bg-light-gray shadow-soft">
+      <%= image_tag @portfolio.image, alt: @portfolio.name, class: "w-full" %>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="rounded-2xl border-t-4 border-accent bg-light-gray p-6">
+        <p class="text-xs font-semibold uppercase tracking-wider text-soft-text">Project</p>
+        <p class="mt-2 text-base font-bold text-primary"><%= @portfolio.name %></p>
+      </div>
+      <div class="rounded-2xl border-t-4 border-accent bg-light-gray p-6">
+        <p class="text-xs font-semibold uppercase tracking-wider text-soft-text">Category</p>
+        <p class="mt-2 text-base font-bold text-primary"><%= @portfolio.category %></p>
+      </div>
+      <div class="rounded-2xl border-t-4 border-btn-green bg-light-gray p-6">
+        <p class="text-xs font-semibold uppercase tracking-wider text-soft-text">Status</p>
+        <p class="mt-2 text-base font-bold text-primary">Delivered</p>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <%= link_to portfolios_path,
+                  class: "inline-flex items-center gap-2 text-sm font-bold text-btn-green no-underline hover:underline" do %>
+        <i class="fas fa-arrow-left text-xs"></i> Back to Portfolio
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

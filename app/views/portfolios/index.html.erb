@@ -1,0 +1,43 @@
+<% content_for :title       do %>Portfolio | ANZARA GLOBAL<% end %>
+<% content_for :meta_title  do %>Portfolio | ANZARA GLOBAL<% end %>
+<% content_for :meta_description do %>A selection of products and platforms ANZARA GLOBAL has built across web, mobile and enterprise.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Portfolio",
+           title: "Selected Work",
+           copy: "A snapshot of the products, platforms and tools we've shipped — across web, mobile, fintech, education, travel and government." %>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-10 flex flex-wrap items-center justify-center gap-3">
+      <% @categories.each_with_index do |cat, i| %>
+        <button type="button"
+                class="<%= i.zero? ? 'bg-primary text-white' : 'bg-white text-primary hover:bg-gray-100' %> rounded-full px-5 py-2 text-sm font-semibold shadow-soft transition">
+          <%= cat %>
+        </button>
+      <% end %>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <% @portfolios.each do |p| %>
+        <%= link_to '#',
+                    class: "group relative block overflow-hidden rounded-2xl bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-hover" do %>
+          <div class="relative aspect-[4/3] overflow-hidden bg-light">
+            <%= image_tag p.image, alt: p.name,
+                          class: "h-full w-full object-cover transition duration-500 group-hover:scale-105" %>
+            <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/30 to-transparent opacity-0 transition duration-300 group-hover:opacity-100"></div>
+            <span class="pointer-events-none absolute bottom-4 left-4 right-4 translate-y-2 text-sm font-semibold text-white opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+              View project <i class="fas fa-arrow-right ml-1 text-xs"></i>
+            </span>
+          </div>
+          <div class="flex items-center justify-between p-5">
+            <h3 class="text-lg font-bold text-primary"><%= p.name %></h3>
+            <span class="rounded-full bg-light px-3 py-1 text-xs font-semibold text-primary"><%= p.category %></span>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

@@ -49,7 +49,7 @@
                   <%= link_to "UI/UX Design & Product Design Services", ui_ux_design_path, class: "mega-menu-link" %>
                   <%= link_to "E-Commerce Solution", e_commerce_solution_path, class: "mega-menu-link" %>
                   <%= link_to "Data Management & Business Analysis", data_management_and_business_analysis_path, class: "mega-menu-link" %>
-                  <%= link_to "Business Automation Solutions", business_automation_solutions_path, class: "mega-menu-link" %>
+                  <%#= link_to "Business Automation Solutions", business_automation_solutions_path, class: "mega-menu-link" %>
                 </div>
                 <div class="column !w-max">
                   <h4 class="mb-2 pb-[5px] text-base text-black">Advanced Tech & Support Services →</h4>
@@ -71,17 +71,17 @@
                         max-[768px]:flex-col">
               <div class="menu-columns grid w-full grid-cols-3 gap-x-8 gap-y-4 max-[1104px]:grid-cols-1">
                 <% [
-                  ["🕌 Islamic Platform →", ["Daily Islam"]],
+
                   ["🧩 Platform / Infrastructure →", ["ShareTribe", "Mindstack"]],
                   ["🛠️ Repair & Logistics →", ["FileTracker", "Qijcorepair"]],
-                  ["🛡️ Govt. / Security →", ["BNV NAVY", "Essential Intelligence Services"]],
+                  ["🛡️ Govt. / Security →", [ "Essential Intelligence Services"]],
                   ["❓ Needs Clarification →", ["iNwe", "EmerLoop"]],
                   ["✈️ Migration & Welcome →", ["Welcome2Australia", "My Welcome App"]],
-                  ["🎧 Entertainment & Media →", ["Pianome", "EPK Solution - New Artist Relase", "Trip Ticket"]],
-                  ["🏦 FinTech & Banking →", ["Islami Bank Bangladesh Limited", "Modhumoti Bank", "Lienex POS"]],
+                  ["🎧 Entertainment & Media →", [ "EPK Solution - New Artist Relase", "Trip Ticket"]],
+                  ["🛒 E-Commerce & Rentals →", ["Lobster Tail Seafood", "Myoldtimer", "Beeprentals", "Armoiar", "Boxgiver"]],
                   ["🎓 EdTech & Learning →", ["Instructory", "Khude Coder", "Digital School", "My School Bag"]],
                   ["🏢 SaaS & Enterprise →", ["TRACPro", "FileTracker", "Rank Up", "Silverback", "One Touch"]],
-                  ["🛒 E-Commerce & Rentals →", ["Lobster Tail Seafood", "Myoldtimer", "Beeprentals", "Armoiar", "Boxgiver"]]
+                  ["🏦 FinTech & Banking →", [ "Lienex POS"]],
                 ].each do |heading, items| %>
                   <div class="column !w-max">
                     <h4 class="mb-2 pb-[5px] text-base text-black"><%= heading %></h4>
@@ -91,11 +91,6 @@
                   </div>
                 <% end %>
 
-                <div class="column !w-max pt-4">
-                  <h4 class="mb-2 pb-[5px] text-base text-black">🔍 Explore All Clients →</h4>
-                  <%= link_to "View Full Client Portfolio", clients_path,
-                              class: "contact-btn cursor-pointer rounded-[5px] border-none bg-btn-green px-4 py-1 text-sm font-bold text-white no-underline ml-6 pl-4" %>
-                </div>
               </div>
             </div>
           </li>
