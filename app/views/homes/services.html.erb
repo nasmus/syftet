@@ -1,0 +1,58 @@
+<% content_for :title       do %>Software Development Services | Syftet Limited<% end %>
+<% content_for :meta_title  do %>Software Development Services | Syftet<% end %>
+<% content_for :meta_description do %>Syftet offers full-cycle software development services — custom software, web, mobile, desktop, UI/UX, AI/ML, IoT, QA and more.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Our Services",
+           title: "Full-Cycle Software Development Services",
+           copy: "Our core team of computer engineers and business professionals is your rock-solid partner for full-cycle custom software development services. From concept to deployment, we build software that works." %>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Explore Our Services
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        SYFTET incorporates the full cycle of offshore software development services. We focus on providing managed dedicated teams and developing sophisticated enterprise applications.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <%
+        services = [
+          { href: custom_software_development_company_path, icon: "fas fa-code",
+            title: "Custom Software",
+            copy: "Bespoke software tailored to your unique business needs. Our engineers design and build solutions from scratch, or extend existing products with precision and reliability." },
+          { href: web_development_company_path, icon: "fas fa-laptop-code",
+            title: "Web Development",
+            copy: "With over a decade of experience and 150+ delivered projects, we build high-quality, responsive, SEO-friendly web applications tailored to your requirements." },
+          { href: desktop_application_development_company_path, icon: "fas fa-desktop",
+            title: "Desktop Applications",
+            copy: "Robust, secure, offline-capable desktop software that integrates seamlessly with your existing systems and workflows across Windows, macOS and Linux." },
+          { href: ui_ux_design_path, icon: "fas fa-paint-brush",
+            title: "UX/UI Design",
+            copy: "Our creative team designs unique, intuitive products that connect your brand with your customers — combining aesthetics with functionality." },
+          { href: mobile_app_development_company_path, icon: "fas fa-mobile-alt",
+            title: "Mobile Development",
+            copy: "High-performance native and cross-platform mobile apps for iOS and Android, designed to engage users and solve real business challenges." },
+          { href: website_maintenance_services_company_path, icon: "fas fa-tools",
+            title: "Maintenance",
+            copy: "Software maintenance can be tricky. Our expert team is available around the clock to keep your software performant, secure and up to date." }
+        ]
+      %>
+      <% services.each do |s| %>
+        <%= link_to s[:href], class: "group relative block rounded-2xl bg-white p-8 shadow-soft transition duration-300 hover:-translate-y-1 hover:bg-light-gray hover:shadow-hover" do %>
+          <div class="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-light text-3xl text-primary transition group-hover:bg-primary group-hover:text-white">
+            <i class="<%= s[:icon] %>"></i>
+          </div>
+          <h3 class="mb-3 text-2xl font-bold text-primary"><%= s[:title] %></h3>
+          <p class="text-base leading-relaxed text-soft-text"><%= s[:copy] %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

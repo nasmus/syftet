@@ -1,0 +1,134 @@
+<% content_for :title       do %>Mobile App Development Company | Syftet<% end %>
+<% content_for :meta_title  do %>Mobile App Development Company | Syftet<% end %>
+<% content_for :meta_description do %>Native and cross-platform iOS and Android mobile applications built by Syftet's experienced engineering team.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Core Development",
+           title: "Mobile Application Development Services Company",
+           copy: "Mobile development is one of our core strengths. We combine technical expertise, years of experience and a deep understanding of platform architecture to deliver apps that ship on time and perform under load." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        What We Do
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        We are a trustworthy partner capable of researching and implementing advanced features across every IT domain — from consumer apps to enterprise mobile platforms.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <% [
+        ["fab fa-apple", "Native iOS & Android", "Advanced applications built with platform-specific languages and frameworks for maximum performance and access to native APIs."],
+        ["fas fa-mobile-screen", "Cross-Platform Development", "Solutions for startups launching MVPs or enterprises needing cost-effective mobile transitions across iOS and Android."],
+        ["fas fa-paint-roller", "Mobile Front-End Development", "UX/UI transformation of existing products for mobile audiences — without rewriting your backend."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl bg-light-gray p-8 transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-2xl text-white">
+            <i class="<%= icon %>"></i>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-primary"><%= title %></h3>
+          <p class="text-base leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="mt-16">
+      <h3 class="mb-6 text-center text-xl font-bold text-primary">Technologies We Use</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        <% %w[Java Swift React\ Native Objective-C Xamarin Kotlin Flutter].each do |tech| %>
+          <span class="rounded-full bg-light px-5 py-2 text-sm font-semibold text-primary shadow-soft"><%= tech %></span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        App Development Timeline
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
+      <% [
+        ["Week 1", "Requirements & Business Analysis"],
+        ["Weeks 2-3", "UX & UI Design"],
+        ["Weeks 4-8", "Back-End Development"],
+        ["Weeks 8-12", "Application Development"],
+        ["Weeks 12-15", "Testing & Launch"]
+      ].each_with_index do |(time, title), i| %>
+        <div class="relative rounded-2xl bg-white p-6 shadow-soft">
+          <div class="mb-3 text-3xl font-extrabold text-accent">0<%= i + 1 %></div>
+          <p class="text-xs font-bold uppercase tracking-wider text-gray-500"><%= time %></p>
+          <h4 class="mt-2 text-base font-bold text-primary"><%= title %></h4>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        What You Get
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <% [
+        ["fas fa-file-lines", "Project Documentation", "Product specifications and design documents you can take anywhere."],
+        ["fas fa-link", "Integration-Ready", "Applications designed for easy interconnection with your other services."],
+        ["fas fa-shield-heart", "Post-Launch Warranty", "Two months of bug fixing and support included after launch."],
+        ["fas fa-plus", "Extra Business Value", "Enhanced functionality from accumulated cross-domain expertise."],
+        ["fas fa-eye", "Complete Transparency", "Milestone-based payment structure with regular demos."],
+        ["fas fa-key", "IP Protection", "You retain sole ownership of ideas, code and assets."]
+      ].each do |icon, title, copy| %>
+        <div class="flex gap-4 rounded-2xl border border-gray-100 bg-light-gray p-6">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-btn-green text-xl text-white">
+            <i class="<%= icon %>"></i>
+          </div>
+          <div>
+            <h4 class="mb-1 text-lg font-bold text-primary"><%= title %></h4>
+            <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-10 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Expertise Domains
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+      <% [
+        "Digital Health & mHealth",
+        "IoT & Wearables",
+        "eLearning Solutions",
+        "VR & AR",
+        "Field Force Effectiveness",
+        "Image & Data Recognition"
+      ].each do |domain| %>
+        <div class="rounded-xl bg-white p-5 text-center shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <span class="text-sm font-semibold text-primary"><%= domain %></span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

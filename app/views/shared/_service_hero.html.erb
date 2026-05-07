@@ -1,0 +1,27 @@
+<%# Shared hero used by every page in the Services section %>
+<section class="relative flex justify-center overflow-hidden bg-gradient-to-b from-primary to-secondary pt-32 pb-20">
+  <div class="pointer-events-none absolute -top-24 -left-24 z-0 h-[350px] w-[350px] rounded-full opacity-10"
+       style="background: linear-gradient(135deg, var(--accent), #3a9e8a);"></div>
+  <div class="pointer-events-none absolute -bottom-32 -right-24 z-0 h-[400px] w-[400px] rounded-full opacity-[0.07]"
+       style="background: linear-gradient(135deg, var(--primary), #2c5aa0);"></div>
+
+  <div class="custom-wrapper relative z-10 px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mx-auto max-w-4xl text-center">
+      <% if local_assigns[:eyebrow].present? %>
+        <p class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-accent"><%= eyebrow %></p>
+      <% end %>
+      <h1 class="text-4xl font-extrabold leading-tight text-white max-[768px]:text-3xl md:text-5xl">
+        <%= title %>
+      </h1>
+      <p class="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-white/80 max-[768px]:text-base">
+        <%= copy %>
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <%= link_to "Start here", contact_us_path,
+                    class: "inline-block rounded-md bg-btn-green px-6 py-3 text-sm font-bold text-white no-underline transition-transform duration-300 hover:scale-105" %>
+        <%= link_to "Contact Us", contact_us_path,
+                    class: "inline-block rounded-md border border-white/30 bg-white/5 px-6 py-3 text-sm font-bold text-white no-underline transition-colors duration-300 hover:bg-white/10" %>
+      </div>
+    </div>
+  </div>
+</section>

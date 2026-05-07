@@ -1,0 +1,94 @@
+<% content_for :title       do %>Business Automation Solutions | Syftet<% end %>
+<% content_for :meta_title  do %>Business Automation Solutions | Syftet<% end %>
+<% content_for :meta_description do %>Syftet's business automation solutions eliminate manual, repetitive work — letting your team focus on what really matters.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Design, UX & Product",
+           title: "Business Automation Solutions",
+           copy: "Business automation is all about using technology to eliminate manual, repetitive tasks — freeing your team to focus on what really matters." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Infrastructure for Scalable Automation
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        Syftet architects automation infrastructures designed to lower operational costs, reduce risk, improve product safety and increase process predictability. Our systems simplify complex operations, ensure consistent quality, protect brand reputation and enhance workflow efficiency while scaling with business growth.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+      <% [
+        ["fas fa-arrow-trend-down", "Lower Operational Cost"],
+        ["fas fa-shield-halved", "Reduced Risk"],
+        ["fas fa-circle-check", "Consistent Quality"],
+        ["fas fa-chart-line", "Process Predictability"]
+      ].each do |icon, label| %>
+        <div class="rounded-xl bg-light-gray p-6 text-center">
+          <div class="mb-3 text-3xl text-primary"><i class="<%= icon %>"></i></div>
+          <p class="text-sm font-semibold text-primary"><%= label %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Secure & Compliant Automation Workflows
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <% [
+        ["fas fa-user-shield", "Role-Based Access & Control", "Define authorisation across the organisation so the right people see the right things."],
+        ["fas fa-eye", "Real-Time Workflow Monitoring", "Track who triggered actions, when they ran and what the outcomes were."],
+        ["fas fa-scale-balanced", "Compliance Frameworks", "Alignment with GDPR, ISO and industry-specific regulations."],
+        ["fas fa-clipboard-check", "Audit-Ready Logs", "Maintain digital records for compliance reporting whenever auditors arrive."]
+      ].each do |icon, title, copy| %>
+        <div class="flex gap-5 rounded-2xl bg-white p-6 shadow-soft">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-primary text-2xl text-white">
+            <i class="<%= icon %>"></i>
+          </div>
+          <div>
+            <h3 class="mb-2 text-lg font-bold text-primary"><%= title %></h3>
+            <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Automation Insights & Control Panels
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <% [
+        ["fas fa-gauge-high", "Automation Dashboards", "Centralised view of every automated process — status, performance, alerts."],
+        ["fas fa-network-wired", "System Integration", "Connect across ERPs, CRMs, HRMS and third-party tools you already use."],
+        ["fas fa-cloud", "Cloud-Based Workflow Access", "Manage automation securely from any device, anywhere."],
+        ["fas fa-robot", "AI-Powered Optimization", "Data-driven improvements that eliminate bottlenecks before they cost you."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl border-t-4 border-accent bg-light-gray p-6 transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 text-3xl text-accent"><i class="<%= icon %>"></i></div>
+          <h4 class="mb-2 text-base font-bold text-primary"><%= title %></h4>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

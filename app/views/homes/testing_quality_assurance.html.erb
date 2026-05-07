@@ -1,0 +1,118 @@
+<% content_for :title       do %>Testing & Quality Assurance (QA) | Syftet<% end %>
+<% content_for :meta_title  do %>Testing & Quality Assurance | Syftet<% end %>
+<% content_for :meta_description do %>Syftet's QA team delivers reliable, bug-free software through functional, performance, security and cross-platform testing.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Advanced Tech & Support",
+           title: "Testing & Quality Assurance (QA)",
+           copy: "In a fast-paced digital world, delivering a product that meets customer expectations and the highest standards of quality is essential. Our Testing and QA services ensure your software, applications and systems are thoroughly tested and optimised — reliable, bug-free and a pleasure to use." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+      <div>
+        <h2 class="relative mb-6 inline-block text-3xl font-bold text-primary md:text-4xl">
+          Functionality & Performance
+          <span class="absolute -bottom-3 left-0 h-[5px] w-[100px] rounded bg-accent"></span>
+        </h2>
+        <p class="mt-8 text-base leading-relaxed text-soft-text md:text-lg">
+          We make sure your product performs flawlessly — every feature, every interaction. From functional testing to load and scalability assessments, our QA process guarantees consistent behaviour under all conditions, including peak traffic.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-2xl bg-gradient-to-br from-primary to-secondary p-6 text-white">
+          <i class="fas fa-vial mb-3 text-3xl text-accent"></i>
+          <p class="font-bold">Functional Testing</p>
+        </div>
+        <div class="rounded-2xl bg-light-gray p-6">
+          <i class="fas fa-gauge-high mb-3 text-3xl text-primary"></i>
+          <p class="font-bold text-primary">Performance Testing</p>
+        </div>
+        <div class="rounded-2xl bg-light-gray p-6">
+          <i class="fas fa-arrows-up-down mb-3 text-3xl text-primary"></i>
+          <p class="font-bold text-primary">Load Testing</p>
+        </div>
+        <div class="rounded-2xl bg-gradient-to-br from-accent to-primary p-6 text-white">
+          <i class="fas fa-rotate mb-3 text-3xl"></i>
+          <p class="font-bold">Regression Testing</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Security & Compliance
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        Your software's security is non-negotiable. We protect it through:
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <% [
+        ["fas fa-user-secret", "Penetration Testing", "Simulating real-world attacks to identify vulnerabilities before bad actors do."],
+        ["fas fa-magnifying-glass", "Vulnerability Scanning", "Automated tools scan for known issues so flaws can be patched quickly."],
+        ["fas fa-network-wired", "API Security Testing", "Ensure APIs are protected against unauthorised access and follow industry compliance standards."],
+        ["fas fa-code", "Secure Coding & Visual Audit", "Source-code and layout-hierarchy reviews enforce security from the ground up."]
+      ].each do |icon, title, copy| %>
+        <div class="flex gap-5 rounded-2xl bg-white p-6 shadow-soft">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-btn-green text-2xl text-white">
+            <i class="<%= icon %>"></i>
+          </div>
+          <div>
+            <h3 class="mb-2 text-lg font-bold text-primary"><%= title %></h3>
+            <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Cross-Platform Usability
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        Your users are everywhere — we test everywhere.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div class="rounded-2xl border-t-4 border-accent bg-light-gray p-8">
+        <div class="mb-4 text-3xl text-accent"><i class="fas fa-globe"></i></div>
+        <h3 class="mb-3 text-xl font-bold text-primary">All Major Browsers</h3>
+        <p class="mb-4 text-base leading-relaxed text-soft-text">
+          We ensure your application delivers a consistent experience across Chrome, Safari, Firefox, Edge and more.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <% %w[Chrome Safari Firefox Edge Opera].each do |b| %>
+            <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-primary shadow-soft"><%= b %></span>
+          <% end %>
+        </div>
+      </div>
+      <div class="rounded-2xl border-t-4 border-accent bg-light-gray p-8">
+        <div class="mb-4 text-3xl text-accent"><i class="fas fa-mobile-screen"></i></div>
+        <h3 class="mb-3 text-xl font-bold text-primary">All Modern Devices</h3>
+        <p class="mb-4 text-base leading-relaxed text-soft-text">
+          From Android and iOS to tablets and desktops — we test responsiveness and performance across every form factor.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <% %w[Android iOS Tablet Desktop Wearable].each do |d| %>
+            <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-primary shadow-soft"><%= d %></span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

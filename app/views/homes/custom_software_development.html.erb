@@ -1,0 +1,104 @@
+<% content_for :title       do %>Custom Software Development Company | Syftet<% end %>
+<% content_for :meta_title  do %>Custom Software Development Company | Syftet<% end %>
+<% content_for :meta_description do %>Syftet builds bespoke software tailored to your business needs — custom apps, product development, enterprise integration and legacy modernization.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Core Development",
+           title: "Custom Software Development Company",
+           copy: "Our team of experts can start with a coffee-stained napkin and develop it into the most complex enterprise solution. We build software the way it should be built — tailored, scalable and dependable." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        What We Do
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        Syftet is a Bangladesh-based custom software firm with offices in Australia and the UK. We specialise in bespoke solutions for businesses that need software built around them — not the other way around.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <%
+        offerings = [
+          { icon: "fas fa-cubes", title: "Custom Applications Development",
+            copy: "Tailored solutions that automate workflows, unify teams and bring order to fragmented processes — built to your specification." },
+          { icon: "fas fa-rocket", title: "Product Development",
+            copy: "From inception to launch, we build cost-efficient products with full lifecycle ownership: discovery, design, development and support." },
+          { icon: "fas fa-network-wired", title: "Enterprise Application Integration",
+            copy: "Unify databases, legacy systems and modern services so your operations run as one — without manual hand-offs or duplicated data." },
+          { icon: "fas fa-arrows-rotate", title: "Legacy Application Modernization",
+            copy: "Update outdated systems to modern stacks, address security vulnerabilities and unlock new capabilities without disrupting your business." }
+        ]
+      %>
+      <% offerings.each do |o| %>
+        <div class="rounded-2xl border border-gray-100 bg-light-gray p-8 transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-2xl text-white">
+            <i class="<%= o[:icon] %>"></i>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-primary"><%= o[:title] %></h3>
+          <p class="text-base leading-relaxed text-soft-text"><%= o[:copy] %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Our Development Approach
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        Our methodology blends quality assurance, low-risk agile delivery, deep business analysis and intellectual property protection — so the result is software you actually want to keep.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <% [
+        ["fas fa-shield-halved", "Quality Assurance", "Multi-layer testing baked into every sprint."],
+        ["fas fa-route", "Low-Risk Agile", "Iterative delivery with milestone checkpoints."],
+        ["fas fa-magnifying-glass-chart", "Business Analysis", "We understand the problem before writing code."],
+        ["fas fa-lock", "IP Protection", "Your ideas, code and assets remain yours."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl bg-white p-6 text-center shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-light text-2xl text-primary">
+            <i class="<%= icon %>"></i>
+          </div>
+          <h4 class="mb-2 text-lg font-bold text-primary"><%= title %></h4>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Why Choose Syftet
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <% [
+        ["Affordable Pricing", "Transparent rates with no hidden fees."],
+        ["Responsive Support", "A quick, responsive team that actually picks up the phone."],
+        ["Customisable Features", "Every feature shaped around your real-world needs."],
+        ["Competitive Costs", "Best-in-class engineering at competitive global rates."]
+      ].each do |title, copy| %>
+        <div class="rounded-2xl border-l-4 border-btn-green bg-light-gray p-6">
+          <h4 class="mb-2 text-lg font-bold text-primary"><%= title %></h4>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

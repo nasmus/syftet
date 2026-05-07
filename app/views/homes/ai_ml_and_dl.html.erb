@@ -1,0 +1,71 @@
+<% content_for :title       do %>AI, Machine Learning & Deep Learning Solutions | Syftet<% end %>
+<% content_for :meta_title  do %>AI, ML & DL Services | Syftet<% end %>
+<% content_for :meta_description do %>Syftet helps businesses harness AI, machine learning and deep learning to solve real-world problems and automate decisions.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Advanced Tech & Support",
+           title: "AI, Machine Learning & Deep Learning Solutions",
+           copy: "We help businesses harness Artificial Intelligence, Machine Learning and Deep Learning to solve real-world problems, automate processes and drive data-informed decisions." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Functionality & Performance
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        Rigorous testing of AI/ML/DL models ensures accuracy, speed and scalability across prediction, classification and automation tasks — so your models perform in production, not just in notebooks.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div class="rounded-2xl bg-gradient-to-br from-primary to-secondary p-10 text-white">
+        <div class="mb-4 text-4xl text-accent"><i class="fas fa-cloud"></i></div>
+        <h3 class="mb-3 text-2xl font-bold">Web & Cloud Platforms</h3>
+        <p class="text-sm leading-relaxed text-white/80">
+          Deploy and scale models across AWS, Azure and GCP with managed services, autoscaling endpoints and full observability built in.
+        </p>
+      </div>
+      <div class="rounded-2xl border-2 border-primary bg-light-gray p-10">
+        <div class="mb-4 text-4xl text-primary"><i class="fas fa-microchip"></i></div>
+        <h3 class="mb-3 text-2xl font-bold text-primary">Edge Devices & Mobile</h3>
+        <p class="text-sm leading-relaxed text-soft-text">
+          Optimised models for edge computing, mobile applications and IoT systems — quantised, pruned and ready for low-latency inference.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        What We Deliver
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <% [
+        ["fas fa-eye", "Computer Vision", "Object detection, classification and image analysis for real-world applications."],
+        ["fas fa-comments", "Natural Language Processing", "Chatbots, sentiment analysis and intelligent document understanding."],
+        ["fas fa-chart-line", "Predictive Analytics", "Forecasting models that turn historical data into forward-looking decisions."],
+        ["fas fa-robot", "Process Automation", "ML-powered automation for repetitive decisioning and workflow tasks."],
+        ["fas fa-brain", "Deep Learning Models", "Custom neural networks trained on your domain-specific data."],
+        ["fas fa-database", "Data Engineering", "Pipelines that get the right data to the right model at the right time."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-light text-2xl text-primary">
+            <i class="<%= icon %>"></i>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary"><%= title %></h3>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

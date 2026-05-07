@@ -1,0 +1,89 @@
+<% content_for :title       do %>UI/UX Design & Product Design Services | Syftet<% end %>
+<% content_for :meta_title  do %>UI/UX Design & Product Design Services | Syftet<% end %>
+<% content_for :meta_description do %>Syftet's UI/UX design team crafts intuitive, on-brand digital experiences across web, mobile and responsive products.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Design, UX & Product",
+           title: "UI/UX Design",
+           copy: "Our core team of computer engineers and business professionals is your rock-solid partner for full-cycle product design — from research to pixel-perfect interfaces." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        What is UI/UX?
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        User experience covers usability and pleasing interaction; user interface defines how the product looks. Together they shape every web, mobile and responsive product we ship.
+      </p>
+    </div>
+
+    <div class="rounded-2xl bg-light-gray p-10">
+      <h3 class="mb-6 text-2xl font-bold text-primary">Strategy and Context</h3>
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <% ["Competitor Analysis", "Customer Analysis", "Product Structure & Strategy", "Content Development"].each do |item| %>
+          <div class="flex items-center gap-3 rounded-lg bg-white p-4 shadow-soft">
+            <i class="fas fa-check-circle text-xl text-btn-green"></i>
+            <span class="text-sm font-semibold text-primary"><%= item %></span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Features Of UI/UX
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <% [
+        ["fas fa-trademark", "Branding", "UI/UX design reflects organisational identity and brand consistency across every channel."],
+        ["fas fa-font", "Colors & Typography", "Elegant colours and elevated typefaces keep customers engaged on your site."],
+        ["fas fa-pen-ruler", "Graphic Design", "Quality layout and visuals integrated into a comprehensive design system."],
+        ["fas fa-layer-group", "Layout & Visual Hierarchy", "Critical content positioned prominently for clear customer engagement."]
+      ].each do |icon, title, copy| %>
+        <div class="group rounded-2xl bg-white p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-light text-2xl text-primary transition group-hover:bg-primary group-hover:text-white">
+            <i class="<%= icon %>"></i>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary"><%= title %></h3>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        UI/UX Design Services
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <% [
+        ["fas fa-mobile-screen-button", "Mobile UX", "Designed for short-burst engagement patterns typical of mobile app users."],
+        ["fas fa-cart-shopping", "Ecommerce", "Streamlined checkout flows that turn browsers into customers without friction."],
+        ["fas fa-globe", "Website UX", "Company websites positioned as digital brand extensions that attract and retain customers."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl border-t-4 border-accent bg-light-gray p-8 transition hover:shadow-hover">
+          <div class="mb-4 text-4xl text-accent"><i class="<%= icon %>"></i></div>
+          <h3 class="mb-3 text-xl font-bold text-primary"><%= title %></h3>
+          <p class="text-base leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

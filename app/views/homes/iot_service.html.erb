@@ -1,0 +1,102 @@
+<% content_for :title       do %>IoT Service | Syftet<% end %>
+<% content_for :meta_title  do %>IoT Service | Syftet<% end %>
+<% content_for :meta_description do %>Syftet builds robust, secure IoT solutions — hardware-integrated systems and cloud-connected software for data-driven operations.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Advanced Tech & Support",
+           title: "IoT Service",
+           copy: "We develop robust, secure IoT solutions tailored to industry-specific needs. Our team builds hardware-integrated systems and cloud-connected software that transform traditional processes into intelligent, data-driven operations." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Why IoT Services Are Important
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        IoT enables organisations to operate smarter and more efficiently by unlocking the power of connected data and automation.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <% [
+        ["fas fa-satellite-dish", "Real-Time Monitoring", "Track equipment, assets or environments remotely from a single dashboard."],
+        ["fas fa-bolt", "Automation", "Minimise manual tasks with smart triggers and event-driven workflows."],
+        ["fas fa-screwdriver-wrench", "Predictive Maintenance", "Detect issues before they cause failures or unplanned downtime."],
+        ["fas fa-chart-bar", "Data-Driven Insights", "Make better decisions with real-time and historical data analysis."],
+        ["fas fa-user-check", "Enhanced User Experience", "Deliver smarter, more personalised solutions for your end customers."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl bg-light-gray p-6 transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-2xl text-white">
+            <i class="<%= icon %>"></i>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary"><%= title %></h3>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Types of IoT Solutions
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <% [
+        ["fas fa-house-laptop", "Smart Home Applications", "Home automation, energy control and remote security in a single ecosystem."],
+        ["fas fa-industry", "Industrial IoT (IIoT)", "Equipment monitoring, factory automation and predictive analytics for production lines."],
+        ["fas fa-stethoscope", "Healthcare IoT", "Remote patient monitoring, wearable integrations and medical-device connectivity."],
+        ["fas fa-seedling", "Agritech IoT", "Smart irrigation, soil sensors and environmental monitoring for modern farming."],
+        ["fas fa-cart-shopping", "Retail IoT", "Smart shelves, inventory tracking and in-store analytics for retailers."],
+        ["fas fa-microchip", "Custom Embedded Systems", "Tailored firmware and embedded solutions for unique hardware needs."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl border-t-4 border-accent bg-white p-6 shadow-soft transition hover:shadow-hover">
+          <div class="mb-3 text-3xl text-accent"><i class="<%= icon %>"></i></div>
+          <h4 class="mb-2 text-lg font-bold text-primary"><%= title %></h4>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        What We Deliver
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <% [
+        ["fas fa-plug", "Device Integration", "Smart sensors, gateways and edge devices integrated seamlessly with your stack."],
+        ["fas fa-window-restore", "Custom Software", "Dashboards, control panels, mobile apps and RESTful APIs purpose-built for your fleet."],
+        ["fas fa-cloud-arrow-up", "Cloud Connectivity", "Secure data transmission and real-time device communication at any scale."],
+        ["fas fa-chart-pie", "Data Analytics", "Real-time visualisation and actionable insights from telemetry streams."],
+        ["fas fa-shield-halved", "Security Protocols", "End-to-end encryption, role-based access and rigorous data protection."],
+        ["fas fa-rotate", "Maintenance & Scalability", "Ongoing support and future-proof solutions as your business evolves."]
+      ].each do |icon, title, copy| %>
+        <div class="flex gap-5 rounded-2xl bg-light-gray p-6">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-btn-green text-xl text-white">
+            <i class="<%= icon %>"></i>
+          </div>
+          <div>
+            <h4 class="mb-1 text-base font-bold text-primary"><%= title %></h4>
+            <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

@@ -1,0 +1,113 @@
+<% content_for :title       do %>Data Management & Business Analysis | Syftet<% end %>
+<% content_for :meta_title  do %>Data Management & Business Analysis | Syftet<% end %>
+<% content_for :meta_description do %>Syftet delivers end-to-end data services — collection, storage, security, and business analysis that turn raw information into strategic insight.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Design, UX & Product",
+           title: "Data Management & Business Analysis",
+           copy: "In a data-driven world, raw information holds value only when it's properly managed and analysed. Syftet delivers end-to-end data services that help your business turn data into a strategic asset — fueling growth, efficiency and innovation." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+      <div>
+        <h2 class="relative mb-6 inline-block text-3xl font-bold text-primary md:text-4xl">
+          Scalable Infrastructure for Data Reliability
+          <span class="absolute -bottom-3 left-0 h-[5px] w-[100px] rounded bg-accent"></span>
+        </h2>
+        <p class="mt-8 text-base leading-relaxed text-soft-text md:text-lg">
+          We ensure your data ecosystem performs seamlessly — from ingestion to insight delivery. We assess infrastructure performance, optimise processing pipelines and ensure data availability even during peak demand. The goal: accurate, timely insights that drive decisions at scale.
+        </p>
+      </div>
+      <div class="rounded-2xl bg-gradient-to-br from-primary to-secondary p-10 text-white">
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <i class="fas fa-server mt-1 text-2xl text-accent"></i>
+            <div>
+              <h4 class="font-bold">Optimised Pipelines</h4>
+              <p class="text-sm text-white/80">High-throughput data processing without bottlenecks.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <i class="fas fa-database mt-1 text-2xl text-accent"></i>
+            <div>
+              <h4 class="font-bold">High Availability</h4>
+              <p class="text-sm text-white/80">Resilient ingestion and storage that survive demand spikes.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <i class="fas fa-bolt mt-1 text-2xl text-accent"></i>
+            <div>
+              <h4 class="font-bold">Real-Time Insight</h4>
+              <p class="text-sm text-white/80">Decision-grade dashboards updated in real time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Data Security & Compliance
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        Effective data management begins with trust. Our security and compliance protocols protect business-critical information at every stage — from ingestion to insight delivery.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <% [
+        ["fas fa-key", "Data Encryption & Access Control", "Encryption protocols and role-based access ensure only the right users access the right data."],
+        ["fas fa-clipboard-list", "Audit Trails & Monitoring", "Real-time monitoring and traceable logs for every activity and access point."],
+        ["fas fa-scale-balanced", "Compliance Readiness", "From GDPR to HIPAA, our systems help you stay compliant with evolving regulations."],
+        ["fas fa-circle-check", "Data Integrity Checks", "Accuracy, consistency and reliability across platforms and the entire data lifecycle."]
+      ].each do |icon, title, copy| %>
+        <div class="flex gap-5 rounded-2xl bg-white p-6 shadow-soft">
+          <div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-btn-green text-2xl text-white">
+            <i class="<%= icon %>"></i>
+          </div>
+          <div>
+            <h3 class="mb-2 text-lg font-bold text-primary"><%= title %></h3>
+            <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Accessible Insights Across Platforms
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        Actionable insights should never be limited by platform or device. We make sure your data is accessible, visualised and usable — securely and intelligently — wherever and whenever needed.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <% [
+        ["fas fa-gauge-high", "Unified Data Dashboards", "Responsive dashboards centralising KPIs and metrics across web, mobile and tablet."],
+        ["fas fa-shuffle", "Seamless Platform Integration", "Connect data across CRMs, ERPs, cloud platforms and BI tools for unified decisions."],
+        ["fas fa-cloud", "Cloud-Based Storage & Backup", "Safe, scalable, 24/7 access with automated backups and disaster recovery."],
+        ["fas fa-brain", "AI-Powered Forecasting", "Predict trends and decide smarter with ML models trained on your business data."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl border-t-4 border-accent bg-light-gray p-6 transition hover:shadow-hover">
+          <div class="mb-4 text-3xl text-accent"><i class="<%= icon %>"></i></div>
+          <h4 class="mb-2 text-base font-bold text-primary"><%= title %></h4>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

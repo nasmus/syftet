@@ -1,0 +1,125 @@
+<% content_for :title       do %>Desktop Application Development Company | Syftet<% end %>
+<% content_for :meta_title  do %>Desktop Application Development Company | Syftet<% end %>
+<% content_for :meta_description do %>Syftet delivers desktop application development services to ISVs and enterprises — robust, secure, offline-capable software built by experts.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Core Development",
+           title: "Desktop Application Development Services in Bangladesh",
+           copy: "Syftet offers desktop application solutions to ISVs and enterprises. Our team of experts is highly skilled and committed to delivering the best possible desktop application for your business." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        What We Do
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        We are a well-known software development company in Bangladesh. Our professional team builds desktop applications from scratch that can play a ground-breaking role at your company.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <%
+        services = [
+          { icon: "fas fa-desktop", title: "Desktop Applications Development",
+            copy: "An expert team of developers, architects, UX/UI specialists and QA analysts builds applications across every major platform." },
+          { icon: "fas fa-flask", title: "Research & Development",
+            copy: "Building projects from scratch with innovative ideas and modern technological solutions tailored to your domain." },
+          { icon: "fas fa-arrow-up-right-from-square", title: "Desktop Software Modernization",
+            copy: "Modernise outdated software to improve performance, security and compatibility with current operating systems." },
+          { icon: "fab fa-windows", title: "UWP Application Development",
+            copy: "Windows-compatible applications built for distribution through the Microsoft Store and across Windows devices." },
+          { icon: "fas fa-puzzle-piece", title: "Desktop Software Integration",
+            copy: "Data transfer and workflow integration for enterprise IT systems — connecting desktop apps to the rest of your stack." },
+          { icon: "fas fa-plug", title: "API Development",
+            copy: "Enhance connectivity and functionality across platforms with secure, well-documented APIs." }
+        ]
+      %>
+      <% services.each do |s| %>
+        <div class="group rounded-2xl border border-gray-100 bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-light text-2xl text-primary transition group-hover:bg-primary group-hover:text-white">
+            <i class="<%= s[:icon] %>"></i>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary"><%= s[:title] %></h3>
+          <p class="text-sm leading-relaxed text-soft-text"><%= s[:copy] %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
+      <div>
+        <h2 class="relative mb-8 inline-block text-3xl font-bold text-primary md:text-4xl">
+          Related Project
+          <span class="absolute -bottom-3 left-0 h-[5px] w-[100px] rounded bg-accent"></span>
+        </h2>
+        <h3 class="mb-3 text-2xl font-bold text-primary">My Welcome App</h3>
+        <p class="mb-6 text-base leading-relaxed text-soft-text">
+          An admin-based application that allows you to perform all the services of your organisation with privacy and caution.
+        </p>
+        <dl class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <div class="rounded-lg bg-white p-4 shadow-soft">
+            <dt class="text-xs font-semibold uppercase text-gray-500">Team Size</dt>
+            <dd class="mt-1 text-base font-bold text-primary">2 Developers</dd>
+          </div>
+          <div class="rounded-lg bg-white p-4 shadow-soft">
+            <dt class="text-xs font-semibold uppercase text-gray-500">Duration</dt>
+            <dd class="mt-1 text-base font-bold text-primary">11 Months</dd>
+          </div>
+          <div class="rounded-lg bg-white p-4 shadow-soft">
+            <dt class="text-xs font-semibold uppercase text-gray-500">Stack</dt>
+            <dd class="mt-1 text-base font-bold text-primary">Ruby, RoR, Android</dd>
+          </div>
+        </dl>
+      </div>
+      <div>
+        <h2 class="relative mb-8 inline-block text-3xl font-bold text-primary md:text-4xl">
+          Technologies We Use
+          <span class="absolute -bottom-3 left-0 h-[5px] w-[100px] rounded bg-accent"></span>
+        </h2>
+        <div class="flex flex-wrap gap-3">
+          <% %w[C# WPF WinForms C++ Java .NET Electron Qt].each do |tech| %>
+            <span class="rounded-full bg-white px-4 py-2 text-sm font-semibold text-primary shadow-soft"><%= tech %></span>
+          <% end %>
+        </div>
+        <p class="mt-8 text-base leading-relaxed text-soft-text">
+          We provide custom middleware expertise for application-to-application and web-platform integration, with deep knowledge of operating system architecture.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Our Expertise
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <% [
+        ["fas fa-chart-line", "Business Intelligence", "Real-time data analysis for smooth workflow management."],
+        ["fas fa-heart-pulse", "Healthcare & Life Science", "Sensitive data handling with specialised, compliant solutions."],
+        ["fas fa-graduation-cap", "Education & Learning", "Special features including speech recognition for learners."],
+        ["fas fa-industry", "Manufacturing & Automation", "Custom firmware for industrial automation and equipment control."],
+        ["fas fa-diagram-project", "Business Process Management", "Document handling and intelligent data recognition."],
+        ["fas fa-box", "ISVs & Boxed Software", "Support for software vendors launching new products."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl border-t-4 border-accent bg-light-gray p-6 transition hover:shadow-hover">
+          <div class="mb-3 text-3xl text-accent"><i class="<%= icon %>"></i></div>
+          <h4 class="mb-2 text-lg font-bold text-primary"><%= title %></h4>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

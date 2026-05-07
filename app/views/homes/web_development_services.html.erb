@@ -1,0 +1,131 @@
+<% content_for :title       do %>Web Development Company | Syftet<% end %>
+<% content_for :meta_title  do %>Web Development Company | Syftet<% end %>
+<% content_for :meta_description do %>Syftet builds beautiful, responsive, mobile-friendly web applications from scratch — full-stack engineering for every platform and device.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Core Development",
+           title: "Web Development Company",
+           copy: "Syftet is a renowned web development company highly experienced in building beautiful, responsive websites. We craft mobile-friendly interfaces from scratch and make them fully functional across every platform and device." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Web Development Services
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        Recognised as a leading web development company in Bangladesh with 150+ delivered clients. Your website is the face of your business — your customers form an impression the moment they land.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <% [
+        ["fas fa-code", "Custom Web Development", "Balanced frontend and backend engineering with bespoke solutions tailored to each project's goals."],
+        ["fas fa-palette", "User Interface Development", "Modern UI engineering using current standards including FLAT Design 2.0 and Material design."],
+        ["fas fa-people-group", "Dedicated Web Developers", "Well-secured codebases and responsive websites with guaranteed on-time delivery."],
+        ["fas fa-wand-magic-sparkles", "UX/UI Development & Design", "Intuitive controls, excellent usability and the best possible visual outlook."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl border border-gray-100 bg-light-gray p-8 transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-2xl text-white">
+            <i class="<%= icon %>"></i>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-primary"><%= title %></h3>
+          <p class="text-base leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="mt-16">
+      <h3 class="mb-6 text-center text-xl font-bold text-primary">Technologies</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        <% %w[Angular React Vue.JS React\ Native jQuery Next.js Tailwind].each do |tech| %>
+          <span class="rounded-full bg-light px-5 py-2 text-sm font-semibold text-primary shadow-soft"><%= tech %></span>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Our Expertise
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <% [
+        ["fas fa-globe", "Web Applications", "Next-gen web applications, web-based software and SaaS solutions that work across all browsers and platforms."],
+        ["fas fa-mobile-alt", "Mobile Applications", "A specialised team creating apps for tabs, phones and other multimedia devices on every platform."],
+        ["fas fa-display", "Desktop Applications", "Stable, efficient desktop solutions for local machines that integrate cleanly with web services."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl bg-white p-8 text-center shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-light text-2xl text-primary">
+            <i class="<%= icon %>"></i>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-primary"><%= title %></h3>
+          <p class="text-base leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        What We Value When Building the Frontend
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <% [
+        ["Usability", "Easy to navigate and functional across every platform and device."],
+        ["Presentation", "Modern design representing your brand identity and clarity."],
+        ["Functionality", "Rich features that work consistently across devices and contexts."],
+        ["Performance", "Lightweight applications optimised for speed and smoothness."]
+      ].each do |title, copy| %>
+        <div class="rounded-2xl border-l-4 border-btn-green bg-light-gray p-6">
+          <h4 class="mb-2 text-lg font-bold text-primary"><%= title %></h4>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Dedicated Team Benefits
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <% [
+        ["Lower expenses", "Minimal cost with a guaranteed flat rate."],
+        ["Quick & easy setup", "Quick responses and timely delivery from day one."],
+        ["High engagement", "Long-term contractual support with regular check-ins."],
+        ["Niche expertise", "Specialised technical support across many domains."],
+        ["Flexibility", "Pace adjusted to project urgency without compromising quality."],
+        ["Process excellence", "Smooth, careful development that respects your timeline."],
+        ["Full control", "Methodologies that keep you in the driver's seat."],
+        ["Transparent hiring", "Pick specific engineers or teams to fit your culture."]
+      ].each do |title, copy| %>
+        <div class="rounded-2xl bg-white p-6 shadow-soft">
+          <h4 class="mb-2 text-base font-bold text-primary"><%= title %></h4>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

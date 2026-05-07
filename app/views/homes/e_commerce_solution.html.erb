@@ -1,0 +1,103 @@
+<% content_for :title       do %>E-Commerce Solution | Syftet<% end %>
+<% content_for :meta_title  do %>E-Commerce Solution | Syftet<% end %>
+<% content_for :meta_description do %>Syftet builds tailor-made e-commerce platforms with secure payments, mobile commerce, intelligent automation and scalable infrastructure.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Design, UX & Product",
+           title: "E-Commerce Solution",
+           copy: "In today's competitive digital economy, a robust and scalable e-commerce presence is essential. At Syftet, we build tailor-made platforms aligned with your industry, customers and growth goals — secure, responsive and conversion-focused." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
+      <div>
+        <h2 class="relative mb-6 inline-block text-3xl font-bold text-primary md:text-4xl">
+          Built for Performance, Designed for Scale
+          <span class="absolute -bottom-3 left-0 h-[5px] w-[100px] rounded bg-accent"></span>
+        </h2>
+        <p class="mt-8 text-base leading-relaxed text-soft-text md:text-lg">
+          Handle high traffic, extensive catalogues and complex workflows with intelligent inventory synchronisation, real-time order tracking and secure payment processing. Scalability, speed and reliability come built in — so you can focus on growth, not glitches.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-2xl bg-gradient-to-br from-primary to-secondary p-6 text-white shadow-hover">
+          <div class="text-3xl font-extrabold">99.9%</div>
+          <p class="mt-2 text-sm opacity-80">Uptime SLA</p>
+        </div>
+        <div class="rounded-2xl bg-light-gray p-6">
+          <div class="text-3xl font-extrabold text-accent">24/7</div>
+          <p class="mt-2 text-sm text-soft-text">Order tracking</p>
+        </div>
+        <div class="rounded-2xl bg-light-gray p-6">
+          <div class="text-3xl font-extrabold text-btn-green">PCI</div>
+          <p class="mt-2 text-sm text-soft-text">DSS compliant</p>
+        </div>
+        <div class="rounded-2xl bg-gradient-to-br from-accent to-primary p-6 text-white">
+          <div class="text-3xl font-extrabold">Multi</div>
+          <p class="mt-2 text-sm opacity-80">Currency ready</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        End-to-End E-Commerce Capabilities
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        From storefront creation to operations automation, our capabilities span the full spectrum of modern e-commerce needs.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <% [
+        ["fas fa-store", "Custom Storefront Design", "Responsive, conversion-focused storefronts tailored to your brand."],
+        ["fas fa-mobile-screen", "Mobile Optimization", "Seamless experience on smartphones, tablets and desktops."],
+        ["fas fa-boxes-stacked", "Inventory & Order Management", "Real-time tracking across channels and warehouses."],
+        ["fas fa-credit-card", "Payment Gateway Integration", "Secure, multi-currency processing through trusted providers."],
+        ["fas fa-plug", "Third-Party Integrations", "CRM, ERP, shipping, marketing and analytics — all connected."],
+        ["fas fa-chart-pie", "Analytics & Reporting", "Deep performance and behavioural insights to guide decisions."],
+        ["fas fa-shield-halved", "Security & Compliance", "PCI DSS, SSL encryption and fraud-prevention by default."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl bg-white p-6 shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-light text-2xl text-primary">
+            <i class="<%= icon %>"></i>
+          </div>
+          <h3 class="mb-2 text-lg font-bold text-primary"><%= title %></h3>
+          <p class="text-sm leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+      <div class="rounded-2xl bg-gradient-to-br from-primary to-secondary p-10 text-white">
+        <h3 class="mb-4 text-2xl font-bold">Mobile Commerce Ready</h3>
+        <p class="text-sm leading-relaxed text-white/80">
+          A mobile-first approach delivering a lightning-fast, app-like experience that converts smartphone shoppers — without sacrificing desktop polish.
+        </p>
+      </div>
+      <div class="rounded-2xl bg-light-gray p-10">
+        <h3 class="mb-4 text-2xl font-bold text-primary">Customer-Centric Automation</h3>
+        <p class="text-sm leading-relaxed text-soft-text">
+          Automated email follow-ups, AI-driven recommendations, chatbots and intelligent support flows that improve retention and customer satisfaction.
+        </p>
+      </div>
+      <div class="rounded-2xl border-2 border-primary bg-white p-10">
+        <h3 class="mb-4 text-2xl font-bold text-primary">Scale Without Limits</h3>
+        <p class="text-sm leading-relaxed text-soft-text">
+          Peak season surges, multi-warehouse expansion and global shipping — all backed by high availability, fast load times and uninterrupted transactions.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

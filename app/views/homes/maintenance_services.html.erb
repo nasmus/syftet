@@ -1,0 +1,172 @@
+<% content_for :title       do %>Website Maintenance Services Company | Syftet<% end %>
+<% content_for :meta_title  do %>Website Maintenance & Support | Syftet<% end %>
+<% content_for :meta_description do %>Syftet offers website maintenance, security and performance services — monthly plans and hourly support to keep your site running.<% end %>
+
+<%= render "shared/service_hero",
+           eyebrow: "Advanced Tech & Support",
+           title: "Website Maintenance, Site Security & Supported Services",
+           copy: "Syftet offers excellent services for website maintenance, site security and performance improvement. Whether you need a monthly-supported plan or hourly service, we'll guide you through and meet your requirements." %>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Monthly Plans
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <%
+        plans = [
+          { name: "Security Patches & CMS Updates", price: "$200", period: "/month", featured: false,
+            features: ["Quarterly CMS security patches", "Annual CMS version upgrades", "Monthly full-site backup and storage"] },
+          { name: "Full Web Maintenance", price: "$450", period: "/month", featured: true,
+            features: ["Quarterly CMS security patches", "Daily security scan", "Up to 3 hours design or development time"] },
+          { name: "After-Hours Maintenance", price: "$4,500", period: "/month", featured: false,
+            features: ["Quarterly CMS security patches", "Urgent CMS support and restore", "Up to 5 hours design or development time"] }
+        ]
+      %>
+      <% plans.each do |plan| %>
+        <div class="<%= plan[:featured] ? 'border-2 border-btn-green bg-light-gray shadow-hover' : 'border border-gray-100 bg-white shadow-soft' %> relative flex flex-col rounded-2xl p-8">
+          <% if plan[:featured] %>
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-btn-green px-4 py-1 text-xs font-bold uppercase tracking-wider text-white">Most Popular</span>
+          <% end %>
+          <h3 class="mb-3 text-lg font-bold text-primary"><%= plan[:name] %></h3>
+          <div class="mb-6">
+            <span class="text-4xl font-extrabold text-primary"><%= plan[:price] %></span>
+            <span class="text-sm text-soft-text"><%= plan[:period] %></span>
+          </div>
+          <ul class="mb-8 flex-grow space-y-3">
+            <% plan[:features].each do |f| %>
+              <li class="flex items-start gap-2 text-sm text-soft-text">
+                <i class="fas fa-check-circle mt-1 text-btn-green"></i>
+                <span><%= f %></span>
+              </li>
+            <% end %>
+          </ul>
+          <%= link_to "Send me a proposal", contact_us_path,
+                      class: "block rounded-md bg-btn-green px-6 py-3 text-center text-sm font-bold text-white no-underline transition-transform duration-300 hover:scale-105" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Web Maintenance Built for Your Business
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+      <p class="mx-auto mt-8 max-w-3xl text-base leading-relaxed text-soft-text md:text-lg">
+        With an ever-increasing rate of online presence, it's important to have solid, attractive, user-friendly websites. Our dedicated maintenance team keeps your site running free of bugs.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <% [
+        ["fas fa-pen-to-square", "Regular Updates", "Text edits, photo additions, page additions, navigation tweaks, file downloads, video swaps and link changes."],
+        ["fas fa-headset", "Tech Support", "Technical problem resolution, consultation requests and an expert team you can actually reach."],
+        ["fab fa-wordpress", "WordPress Maintenance", "Upgrades and security services included with every WordPress maintenance plan."]
+      ].each do |icon, title, copy| %>
+        <div class="rounded-2xl bg-white p-8 shadow-soft transition hover:-translate-y-1 hover:shadow-hover">
+          <div class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary text-2xl text-white">
+            <i class="<%= icon %>"></i>
+          </div>
+          <h3 class="mb-3 text-xl font-bold text-primary"><%= title %></h3>
+          <p class="text-base leading-relaxed text-soft-text"><%= copy %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-white py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
+      <div>
+        <h2 class="relative mb-8 inline-block text-2xl font-bold text-primary md:text-3xl">
+          What Regular Updates Include
+          <span class="absolute -bottom-3 left-0 h-[5px] w-[80px] rounded bg-accent"></span>
+        </h2>
+        <ul class="space-y-4">
+          <% [
+            ["Overall site improvements", "Performance optimisation through routine checks."],
+            ["Product or service updates", "Catalogue, services and pricing kept current as you grow."],
+            ["Online specials", "Sales, promotions and competitive offers kept on schedule."],
+            ["Interactivity maintenance", "Cross-platform compatibility that reduces bounce."]
+          ].each do |title, copy| %>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-circle-check mt-1 text-xl text-btn-green"></i>
+              <div>
+                <span class="block font-bold text-primary"><%= title %></span>
+                <span class="text-sm text-soft-text"><%= copy %></span>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div>
+        <h2 class="relative mb-8 inline-block text-2xl font-bold text-primary md:text-3xl">
+          What's Not Included
+          <span class="absolute -bottom-3 left-0 h-[5px] w-[80px] rounded bg-red-500"></span>
+        </h2>
+        <ul class="space-y-3">
+          <% [
+            "Navigation redesign",
+            "Media creation",
+            "Media edits",
+            "Content writing",
+            "New site functionality",
+            "Site redesigns",
+            "Interactive features",
+            "SEO"
+          ].each do |item| %>
+            <li class="flex items-center gap-3 rounded-lg bg-light-gray p-3">
+              <i class="fas fa-circle-xmark text-red-500"></i>
+              <span class="text-sm text-soft-text"><%= item %></span>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex justify-center bg-light-gray py-20">
+  <div class="custom-wrapper px-20 max-[1104px]:px-8 max-[768px]:px-4">
+    <div class="mb-14 text-center">
+      <h2 class="relative inline-block text-3xl font-bold text-primary md:text-4xl">
+        Hourly Plans
+        <span class="absolute -bottom-3 left-1/2 h-[5px] w-[100px] -translate-x-1/2 rounded bg-accent"></span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <%
+        hourly = [
+          { name: "Design & Support", price: "$100", note: "Billed in 30-minute increments. Minimum 1 hour." },
+          { name: "Internet Marketing", price: "$100", note: "Billed in 30-minute increments. Minimum 1 hour." },
+          { name: "Development", price: "$125", note: "Billed in 30-minute increments. Minimum 1.5 hours." }
+        ]
+      %>
+      <% hourly.each do |plan| %>
+        <div class="rounded-2xl bg-white p-8 text-center shadow-soft">
+          <h3 class="mb-3 text-lg font-bold text-primary"><%= plan[:name] %></h3>
+          <div class="mb-3"><span class="text-4xl font-extrabold text-primary"><%= plan[:price] %></span><span class="text-sm text-soft-text">/hour</span></div>
+          <p class="mb-6 text-xs text-soft-text"><%= plan[:note] %></p>
+          <%= link_to "Get Started", contact_us_path,
+                      class: "inline-block rounded-md bg-primary px-6 py-2 text-sm font-bold text-white no-underline transition hover:bg-secondary" %>
+        </div>
+      <% end %>
+    </div>
+
+    <p class="mx-auto mt-10 max-w-3xl text-center text-xs italic text-soft-text">
+      All plans are subject to service-provider approval. Customers who exceed their allotted max tickets per plan more than three times a year will be automatically updated to the next plan tier.
+    </p>
+  </div>
+</section>
+
+<%= render "shared/service_cta" %>

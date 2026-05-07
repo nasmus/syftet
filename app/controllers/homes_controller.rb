@@ -6,15 +6,24 @@ class HomesController < ApplicationController
     @contactinfo = OpenStruct.new
   end
 
+  SERVICE_ACTIONS = %i[
+    services custom_software_development desktop_service
+    mobile_application_services web_development_services ui_ux_design
+    e_commerce_solution data_management_and_business_analysis
+    business_automation_solutions ai_ml_and_dl iot_service
+    maintenance_services testing_quality_assurance
+  ].freeze
+
+  SERVICE_ACTIONS.each do |action|
+    define_method(action) { render action }
+  end
+
   STUB_ACTIONS = %i[
-    sitemap review clients events services career about_us technologies
-    contact_us how_we_work custom_software_development desktop_service
-    mobile_application_services data_management_and_business_analysis
-    testing_quality_assurance iot_service ai_ml_and_dl life_at_syftet
-    e_commerce_solution business_automation_solutions web_development_services
+    sitemap review clients events career about_us technologies
+    contact_us how_we_work life_at_syftet
     ror_development java_application_development dot_net_development
-    maintenance_services company_profile photo_gallery web_design_company
-    privacy_and_policy ui_ux_design contest
+    company_profile photo_gallery web_design_company
+    privacy_and_policy contest
   ].freeze
 
   STUB_ACTIONS.each do |action|
